@@ -19,7 +19,17 @@
       <img src="../assets/images/maps.png" alt="" />
     </div>
     <div class="location-building">
-      <img src="../assets/images/buildings.png" alt="" />
+      <!-- <img src="../assets/images/buildings.png" alt="" /> -->
+      <div class="location-building-content">
+        <div class="location-building-content-title">
+          <p>15</p>
+          <p>years</p>
+        </div>
+        <div class="location-building-content-text">
+          <p>of experience</p>
+          <p>{{ `in the ` }}<span>iGaming</span></p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -34,7 +44,6 @@ export default {
 <style>
 .location {
   width: 100%;
-  /* height: 779px; */
   position: relative;
 }
 .location-content {
@@ -72,15 +81,150 @@ export default {
   transform: translateY(-90px);
 }
 .location-bg img {
-  width: 1437px;
+  width: 75%;
   height: 628px;
   margin: 0 auto;
 }
 .location-building {
   transform: translateY(-230px);
-}
-.location-building img {
+  position: relative;
+  background: url(../assets/images/buildings.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 100%;
   height: 628px;
+}
+.location-building-content {
+  width: 357px;
+  height: 452px;
+  background: rgba(21, 22, 30, 0.9);
+  border-radius: 0px 0px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  left: 20%;
+  top: 0;
+}
+.location-building-content-title {
+  position: relative;
+}
+.location-building-content-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96px;
+  height: 1px;
+  background: #f41616;
+}
+.location-building-content-title p:first-child {
+  font-size: 200px;
+  font-weight: 700;
+  line-height: 234.38px;
+  text-align: center;
+  color: #f41616;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0;
+}
+.location-building-content-title p:last-child {
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 87.85px;
+  text-align: center;
+  color: #fff;
+  font-family: "Mulish", sans-serif;
+  margin-top: -40px;
+  text-transform: uppercase;
+}
+.location-building-content-text p {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 37.65px;
+  font-family: "Mulish", sans-serif;
+  color: #fff;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.location-building-content-text p span {
+  font-weight: 500;
+  line-height: 35.16px;
+  font-family: "Roboto", sans-serif;
+  color: #f41616;
+}
+
+@media only screen and (max-width: 960px) {
+  .location-building-content {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .location-bg img {
+    width: 100%;
+  }
+  .location-building {
+    background: url(../assets/images/building.png);
+    width: 100%;
+    height: 480px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .location-bg {
+    transform: translateY(0);
+  }
+  .location-bg img {
+    width: 100%;
+    height: 185px;
+  }
+
+  .location-building-content {
+    width: 253px;
+    height: 281px;
+    top: 70px;
+  }
+  .location-building {
+    transform: translateY(0);
+    height: 409px;
+    position: relative;
+    background-color: #15161e;
+  }
+  .location-building img {
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+  }
+  .location-building-content-title p:first-child {
+    font-size: 96px;
+    line-height: 112.5px;
+  }
+  .location-building-content-title p:last-child {
+    font-size: 26px;
+    line-height: 32.63px;
+    margin-top: -10px;
+  }
+  .location-building-content-text {
+    margin-top: 20px;
+  }
+  .location-building-content-text p {
+    font-size: 18px;
+    line-height: 22.59px;
+  }
+  .location-content-title {
+    font-size: 12px;
+    line-height: 14.09px;
+    letter-spacing: 5px;
+  }
+  .location-content-suggest {
+    font-size: 26px;
+    line-height: 30.52px;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+  }
+  .location-content-text p {
+    padding: 0 22px;
+  }
 }
 </style>
