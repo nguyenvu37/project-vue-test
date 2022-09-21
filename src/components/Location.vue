@@ -19,7 +19,6 @@
       <img src="../assets/images/maps.png" alt="" />
     </div>
     <div class="location-building">
-      <!-- <img src="../assets/images/buildings.png" alt="" /> -->
       <div class="location-building-content">
         <div class="location-building-content-title">
           <p>15</p>
@@ -37,7 +36,7 @@
 <script>
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Location",
+  name: 'Location',
 };
 </script>
 
@@ -67,7 +66,7 @@ export default {
   margin-bottom: 32px;
 }
 .location-content-text p {
-  font-family: "Mulish", sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
@@ -86,12 +85,12 @@ export default {
   margin: 0 auto;
 }
 .location-building {
-  transform: translateY(-230px);
+  /* transform: translateY(-230px); */
   position: relative;
   background: url(../assets/images/buildings.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   width: 100%;
   height: 628px;
 }
@@ -112,7 +111,7 @@ export default {
   position: relative;
 }
 .location-building-content-title::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -127,7 +126,7 @@ export default {
   line-height: 234.38px;
   text-align: center;
   color: #f41616;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 0;
 }
 .location-building-content-title p:last-child {
@@ -136,7 +135,7 @@ export default {
   line-height: 87.85px;
   text-align: center;
   color: #fff;
-  font-family: "Mulish", sans-serif;
+  font-family: 'Mulish', sans-serif;
   margin-top: -40px;
   text-transform: uppercase;
 }
@@ -144,7 +143,7 @@ export default {
   font-size: 30px;
   font-weight: 400;
   line-height: 37.65px;
-  font-family: "Mulish", sans-serif;
+  font-family: 'Mulish', sans-serif;
   color: #fff;
   margin-bottom: 0;
   text-align: center;
@@ -153,7 +152,7 @@ export default {
 .location-building-content-text p span {
   font-weight: 500;
   line-height: 35.16px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #f41616;
 }
 

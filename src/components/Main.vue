@@ -16,14 +16,16 @@
     </div>
   </div>
   <Location />
+  <Product />
 </template>
 
 <script>
-import Location from "./Location";
+import Location from './Location';
+import Product from './Product';
 
 export default {
-  name: "MainLayout",
-  components: { Location },
+  name: 'MainLayout',
+  components: { Location, Product },
   setup() {
     const handleScrollDown = () => {
       window.scrollTo(0, document.body.scrollHeight);
