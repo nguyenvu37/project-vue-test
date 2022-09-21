@@ -10,22 +10,28 @@
       <p>casino</p>
       <p>playgame</p>
     </div>
-    <div class="scroll-down" @click="handleScrollDown">
+    <div class="scroll" @click="handleScrollDown">
       <p>Scroll</p>
-      <img src="../assets/images/icon_scroll_d.svg" alt="" />
+      <div class="icon d-flex align-items-center justify-content-center">
+        <img src="../assets/images/icon_scroll_d.svg" alt="" />
+      </div>
     </div>
   </div>
   <Location />
   <Product />
+  <Partners />
+  <Clients />
 </template>
 
 <script>
-import Location from './Location';
-import Product from './Product';
+import Location from "./Location";
+import Product from "./Product";
+import Partners from "./Partners";
+import Clients from "./Clients";
 
 export default {
-  name: 'MainLayout',
-  components: { Location, Product },
+  name: "MainLayout",
+  components: { Location, Product, Partners, Clients },
   setup() {
     const handleScrollDown = () => {
       window.scrollTo(0, document.body.scrollHeight);
@@ -110,7 +116,8 @@ export default {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.scroll-down {
+
+.scroll {
   position: absolute;
   left: 50%;
   bottom: 210px;
@@ -120,15 +127,6 @@ export default {
   flex-direction: column;
   cursor: pointer;
   transform: translateX(-50%);
-}
-.scroll-down p {
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 35.22px;
-  letter-spacing: 1px;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 8px;
 }
 
 @media only screen and (max-width: 960px) {
@@ -158,7 +156,7 @@ export default {
   .bg-blur {
     height: 900px;
   }
-  .scroll-down {
+  .scroll {
     bottom: 120px;
   }
 }
@@ -183,15 +181,15 @@ export default {
     bottom: -12%;
     left: -2%;
   }
-  .scroll-down {
+  .scroll {
     bottom: 61px;
   }
-  .scroll-down img {
+  .scroll img {
     width: 21.19px;
     height: 15.14px;
     margin: 0 auto;
   }
-  .scroll-down p {
+  .scroll p {
     font-size: 12px;
     font-weight: 400;
     line-height: 14.09px;

@@ -1,14 +1,14 @@
 <template>
-  <div class="product">
+  <div class="product" id="item2">
     <div class="product-bg"></div>
     <div class="product-content container-fluid">
       <div class="product-content-text">
         <div class="row">
-          <div class="title col-sm-4">
-            <p>BPLAY GAME</p>
-            <p>OUR PRODUCTS</p>
+          <div class="title col-lg-4">
+            <p class="name">BPLAY GAME</p>
+            <p class="section">OUR PRODUCTS</p>
           </div>
-          <div class="text col-sm-8">
+          <div class="text col-lg-8">
             <p>
               BPlay’s high quality iGaming Platform offers a complete solution
               for your casino. Get the full White Label turnkey solution or the
@@ -25,88 +25,94 @@
       <div class="product-content-list">
         <div class="row">
           <div
-            class="product-content-item col-md-4"
-            v-for="product in listProducts"
+            class="product-content-item col-xxl-4 col-lg-6"
+            v-for="product in products"
             :key="product.id"
           >
             <img :src="require(`../assets/images/${product.image}`)" alt="" />
             <div class="product-content-item-name">
-              {{ product.name }}
+              <p>{{ product.name }}</p>
             </div>
             <p>{{ product.information }}</p>
           </div>
         </div>
+      </div>
+
+      <div class="product-content-slide">
+        <Slider :products="products" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref } from "vue";
+import Slider from "./Slider";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Product',
+  name: "Product",
+  components: { Slider },
   setup() {
-    const listProducts = ref([
+    const products = ref([
       {
         id: 1,
-        name: 'Live Casino',
-        information: 'Vivo LiveCasino, HoGaming Live Casino, BPlay LiveCasino',
-        image: 'casino1.png',
+        name: "Live Casino",
+        information: "Vivo LiveCasino, HoGaming Live Casino, BPlay LiveCasino",
+        image: "casino1.png",
       },
       {
         id: 2,
-        name: 'Fishing Game',
-        information: 'BPlay Fishing 2D, BPlay Fishing 3D',
-        image: 'casino2.svg',
+        name: "Fishing Game",
+        information: "BPlay Fishing 2D, BPlay Fishing 3D",
+        image: "casino2.svg",
       },
       {
         id: 3,
-        name: 'Sport Book',
-        information: 'BTI Sportsbook, BPlay Sportsbook',
-        image: 'casino3.svg',
+        name: "Sport Book",
+        information: "BTI Sportsbook, BPlay Sportsbook",
+        image: "casino3.svg",
       },
       {
         id: 4,
-        name: 'Quick Number',
-        information: 'Keno, Number Games, Lottery',
-        image: 'casino4.svg',
+        name: "Quick Number",
+        information: "Keno, Number Games, Lottery",
+        image: "casino4.svg",
       },
       {
         id: 5,
-        name: 'White Label',
-        information: 'White Label',
-        image: 'casino5.svg',
+        name: "White Label",
+        information: "White Label",
+        image: "casino5.svg",
       },
       {
         id: 6,
-        name: 'Slots',
-        information: 'BPlay Slots, Jackpot Slots',
-        image: 'casino6.svg',
+        name: "Slots",
+        information: "BPlay Slots, Jackpot Slots",
+        image: "casino6.svg",
       },
       {
         id: 7,
-        name: 'Seamless API',
-        information: 'Seamless API',
-        image: 'casino7.svg',
+        name: "Seamless API",
+        information: "Seamless API",
+        image: "casino7.svg",
       },
       {
         id: 8,
-        name: 'Full Package',
-        information: 'Full Package',
-        image: 'casino8.svg',
+        name: "Full Package",
+        information: "Full Package",
+        image: "casino8.svg",
       },
       {
         id: 9,
-        name: 'Table Game',
-        information: 'Table Game',
-        image: 'casino9.svg',
+        name: "Table Game",
+        information: "Table Game",
+        image: "casino9.svg",
       },
     ]);
 
     return {
-      listProducts,
+      products,
     };
   },
 };
@@ -118,9 +124,9 @@ export default {
   position: relative;
   background: url(../assets/images/bg_wave.svg);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 2673px;
+  height: auto;
 }
 .product-bg {
   background: url(../assets/images/bg_gambling.svg);
@@ -139,30 +145,104 @@ export default {
 .product-content-text {
   color: #fff;
 }
-.product-content-text .title p:first-child {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 28.18px;
-  letter-spacing: 10px;
-  text-align: left;
-  color: #ff3232;
-  margin-bottom: 8px;
+.product-content-list {
+  margin-top: 80px;
 }
-.product-content-text .title p:last-child {
-  font-size: 48px;
-  font-weight: 800;
-  line-height: 56.35px;
-  text-align: left;
-}
-.product-content-text .text p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 30px;
-  letter-spacing: 1px;
-  color: #eaeaea;
+.product-content-item {
+  margin-bottom: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .product-content-item img {
   width: 435px;
   height: 446px;
+}
+.product-content-item-name {
+  background: url("../assets/images/bg_name_casino.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 339px;
+  height: 54px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 28px auto 20px;
+}
+.product-content-item .product-content-item-name p {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35.22px;
+  letter-spacing: 1px;
+  color: #fff;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-content-item p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 1px;
+  font-family: "Mulish", sans-serif;
+  color: #fff;
+  margin-bottom: 0;
+  text-align: center;
+}
+.product-content-slide {
+  display: none;
+}
+@media only screen and (max-width: 992px) {
+  .product-content-text .title p,
+  .product-content-text .text p {
+    text-align: center !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .product-content-item img {
+    width: 280px !important;
+    height: 270px;
+  }
+  .product-content-item {
+    width: 280px !important;
+    display: flex;
+  }
+  .product-content-item-name {
+    width: 250px !important;
+    height: 33.36px !important;
+  }
+  .product-content-item-name p {
+    font-size: 16px !important;
+    line-height: 18.78px !important;
+    margin-bottom: 0;
+    height: 33.36px !important;
+  }
+  .product-content-list .row {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .product-bg {
+    background: url(../assets/images/bg_gambling_small.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 253px;
+    transform: translateY(-10px);
+    background-color: #1a1c25;
+  }
+  .product-content-text {
+    margin-top: 155px;
+  }
+  .product-content-list {
+    display: none;
+  }
+  .product-content-slide {
+    display: block;
+    height: auto;
+  }
 }
 </style>

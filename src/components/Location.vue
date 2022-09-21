@@ -1,5 +1,5 @@
 <template>
-  <div class="location">
+  <div class="location" id="item1">
     <div class="location-content">
       <div class="location-content-title">BPLAY GAME</div>
       <div class="location-content-suggest">WHO WE ARE?</div>
@@ -36,7 +36,7 @@
 <script>
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Location',
+  name: "Location",
 };
 </script>
 
@@ -66,7 +66,7 @@ export default {
   margin-bottom: 32px;
 }
 .location-content-text p {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
@@ -111,7 +111,7 @@ export default {
   position: relative;
 }
 .location-building-content-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -126,7 +126,7 @@ export default {
   line-height: 234.38px;
   text-align: center;
   color: #f41616;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-bottom: 0;
 }
 .location-building-content-title p:last-child {
@@ -135,7 +135,7 @@ export default {
   line-height: 87.85px;
   text-align: center;
   color: #fff;
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   margin-top: -40px;
   text-transform: uppercase;
 }
@@ -143,7 +143,7 @@ export default {
   font-size: 30px;
   font-weight: 400;
   line-height: 37.65px;
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   color: #fff;
   margin-bottom: 0;
   text-align: center;
@@ -152,15 +152,11 @@ export default {
 .location-building-content-text p span {
   font-weight: 500;
   line-height: 35.16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #f41616;
 }
 
 @media only screen and (max-width: 960px) {
-  .location-building-content {
-    left: 50%;
-    transform: translateX(-50%);
-  }
   .location-bg img {
     width: 100%;
   }
@@ -168,17 +164,8 @@ export default {
     background: url(../assets/images/building.png);
     width: 100%;
     height: 480px;
+    background-size: contain;
   }
-}
-@media only screen and (max-width: 376px) {
-  .location-bg {
-    transform: translateY(0);
-  }
-  .location-bg img {
-    width: 100%;
-    height: 185px;
-  }
-
   .location-building-content {
     width: 253px;
     height: 281px;
@@ -211,6 +198,16 @@ export default {
     font-size: 18px;
     line-height: 22.59px;
   }
+}
+@media only screen and (max-width: 376px) {
+  .location-bg {
+    transform: translateY(0);
+  }
+  .location-bg img {
+    width: 100%;
+    height: 185px;
+  }
+
   .location-content-title {
     font-size: 12px;
     line-height: 14.09px;
