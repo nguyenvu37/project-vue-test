@@ -24,13 +24,13 @@
 </template>
 
 <script>
-import Location from "./Location";
-import Product from "./Product";
-import Partners from "./Partners";
-import Clients from "./Clients";
+import Location from './Location';
+import Product from './Product';
+import Partners from './Partners';
+import Clients from './Clients';
 
 export default {
-  name: "MainLayout",
+  name: 'MainLayout',
   components: { Location, Product, Partners, Clients },
   setup() {
     const handleScrollDown = () => {
@@ -46,7 +46,6 @@ export default {
 
 <style>
 .main {
-  /* background-image: url("../assets/images/bg_black.png"); */
   width: 100%;
   height: 1155px;
   position: relative;
@@ -63,7 +62,25 @@ export default {
   width: 100%;
   height: 1155px;
   z-index: 12;
+  animation: bgImage 2s ease-out;
+  animation-delay: 1s;
 }
+
+@keyframes bgImage {
+  0% {
+    background: url(../assets/images/bg_black.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  100% {
+    background: url(../assets/images/bg_main.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 .bg-red {
   background: url(../assets/images/bg_red.png);
   background-position: center;
@@ -99,10 +116,20 @@ export default {
 }
 .main-text {
   position: absolute;
+  top: 50%;
   left: 50%;
-  bottom: 40%;
   transform: translateX(-50%);
   z-index: 15;
+  animation: mainText 3s ease-out;
+}
+@keyframes mainText {
+  0% {
+    top: -1000px;
+  }
+  100% {
+    top: 50%;
+    transform: translateX(-50%);
+  }
 }
 .main-text p {
   font-size: 96px;

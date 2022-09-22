@@ -153,6 +153,9 @@ ul li {
   justify-content: center;
   position: relative;
 }
+ul li:hover a {
+  color: #c0c3ce;
+}
 ul li::after {
   transition: all 0.5s;
   content: '';
@@ -263,6 +266,15 @@ ul li.active:after {
     left: 0;
     top: 0;
     transition: all 0.5s;
+    animation: dropdown 0.5s ease-in-out;
+  }
+  @keyframes dropdown {
+    0% {
+      left: -1000px;
+    }
+    100% {
+      left: 0%;
+    }
   }
   .menu-dropdown-header {
     display: flex;
