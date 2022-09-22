@@ -73,19 +73,19 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref } from 'vue';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Header",
+  name: 'Header',
   setup() {
     const isMenu = ref(false);
     const listMenu = ref([
-      { id: 1, value: "about us", isActive: false },
-      { id: 2, value: "products", isActive: false },
-      { id: 3, value: "partners", isActive: false },
-      { id: 4, value: "our clients", isActive: false },
-      { id: 5, value: "contact us", isActive: false },
+      { id: 1, value: 'about us', isActive: false },
+      { id: 2, value: 'products', isActive: false },
+      { id: 3, value: 'partners', isActive: false },
+      { id: 4, value: 'our clients', isActive: false },
+      { id: 5, value: 'contact us', isActive: false },
     ]);
 
     const handleClickMenu = (id) => {
@@ -119,7 +119,7 @@ header {
   padding-top: 42px;
   padding-bottom: 15px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
 }
 .header-logo {
   cursor: pointer;
@@ -155,12 +155,12 @@ ul li {
 }
 ul li::after {
   transition: all 0.5s;
-  content: "";
+  content: '';
   position: absolute;
   width: 0;
 }
 ul li.active:after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 2px;
@@ -211,7 +211,7 @@ ul li.active:after {
   display: none;
   transform: translateX(-1000px);
   transition: all 0.5s;
-  width: 100%;
+  width: 0;
   height: 100vh;
   background: #1a1c25;
 }
@@ -256,11 +256,13 @@ ul li.active:after {
     width: 39px;
   }
   .menu-dropdown.active {
+    width: 100%;
     display: block;
     transform: translateX(0);
     position: fixed;
     left: 0;
     top: 0;
+    transition: all 0.5s;
   }
   .menu-dropdown-header {
     display: flex;

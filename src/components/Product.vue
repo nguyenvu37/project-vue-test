@@ -152,12 +152,17 @@ export default {
   margin-bottom: 46px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
 }
 .product-content-item img {
   width: 435px;
   height: 446px;
+}
+.product-content-item img:hover {
+  transform: translateY(-10px);
+  transition: all 0.5s;
+  cursor: pointer;
 }
 .product-content-item-name {
   background: url('../assets/images/bg_name_casino.svg');
@@ -170,6 +175,7 @@ export default {
   align-content: center;
   justify-content: center;
   margin: 28px auto 20px;
+  cursor: pointer;
 }
 .product-content-item .product-content-item-name p {
   font-size: 30px;
