@@ -162,11 +162,11 @@ export default {
 }
 @media only screen and (max-width: 376px) {
   .main {
-    height: 402px;
+    height: 400px;
   }
 
   .main .bg-image {
-    height: 402px;
+    height: 400px;
     object-fit: contain;
     background: url(../assets/images/bg_main_small.png);
   }
@@ -175,7 +175,7 @@ export default {
     background: url(../assets/images/bg_red_small.png);
   }
   .bg-blur {
-    height: 402px;
+    height: 414px;
   }
   .icon-blur {
     bottom: -12%;
