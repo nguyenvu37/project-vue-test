@@ -46,68 +46,68 @@
 </template>
 
 <script>
-import { ref } from "vue";
-import Slider from "./Slider";
+import { ref } from 'vue';
+import Slider from './Slider';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Product",
+  name: 'Product',
   components: { Slider },
   setup() {
     const products = ref([
       {
         id: 1,
-        name: "Live Casino",
-        information: "Vivo LiveCasino, HoGaming Live Casino, BPlay LiveCasino",
-        image: "casino1.png",
+        name: 'Live Casino',
+        information: 'Vivo LiveCasino, HoGaming Live Casino, BPlay LiveCasino',
+        image: 'casino1.png',
       },
       {
         id: 2,
-        name: "Fishing Game",
-        information: "BPlay Fishing 2D, BPlay Fishing 3D",
-        image: "casino2.svg",
+        name: 'Fishing Game',
+        information: 'BPlay Fishing 2D, BPlay Fishing 3D',
+        image: 'casino2.svg',
       },
       {
         id: 3,
-        name: "Sport Book",
-        information: "BTI Sportsbook, BPlay Sportsbook",
-        image: "casino3.svg",
+        name: 'Sport Book',
+        information: 'BTI Sportsbook, BPlay Sportsbook',
+        image: 'casino3.svg',
       },
       {
         id: 4,
-        name: "Quick Number",
-        information: "Keno, Number Games, Lottery",
-        image: "casino4.svg",
+        name: 'Quick Number',
+        information: 'Keno, Number Games, Lottery',
+        image: 'casino4.svg',
       },
       {
         id: 5,
-        name: "White Label",
-        information: "White Label",
-        image: "casino5.svg",
+        name: 'White Label',
+        information: 'White Label',
+        image: 'casino5.svg',
       },
       {
         id: 6,
-        name: "Slots",
-        information: "BPlay Slots, Jackpot Slots",
-        image: "casino6.svg",
+        name: 'Slots',
+        information: 'BPlay Slots, Jackpot Slots',
+        image: 'casino6.svg',
       },
       {
         id: 7,
-        name: "Seamless API",
-        information: "Seamless API",
-        image: "casino7.svg",
+        name: 'Seamless API',
+        information: 'Seamless API',
+        image: 'casino7.svg',
       },
       {
         id: 8,
-        name: "Full Package",
-        information: "Full Package",
-        image: "casino8.svg",
+        name: 'Full Package',
+        information: 'Full Package',
+        image: 'casino8.svg',
       },
       {
         id: 9,
-        name: "Table Game",
-        information: "Table Game",
-        image: "casino9.svg",
+        name: 'Table Game',
+        information: 'Table Game',
+        image: 'casino9.svg',
       },
     ]);
 
@@ -160,7 +160,7 @@ export default {
   height: 446px;
 }
 .product-content-item-name {
-  background: url("../assets/images/bg_name_casino.svg");
+  background: url('../assets/images/bg_name_casino.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -187,7 +187,7 @@ export default {
   font-weight: 600;
   line-height: 28px;
   letter-spacing: 1px;
-  font-family: "Mulish", sans-serif;
+  font-family: 'Mulish', sans-serif;
   color: #fff;
   margin-bottom: 0;
   text-align: center;
@@ -225,6 +225,9 @@ export default {
   }
 }
 @media only screen and (max-width: 376px) {
+  .product {
+    height: 1200px;
+  }
   .product-bg {
     background: url(../assets/images/bg_gambling_small.svg);
     background-position: center;
