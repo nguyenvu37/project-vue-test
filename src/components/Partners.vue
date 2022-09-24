@@ -98,8 +98,15 @@ export default {
     width: 100%;
     height: auto;
   }
+  .partners-list {
+    margin: 0 auto;
+    transform: translateX(0);
+  }
 }
 @media only screen and (max-width: 376px) {
+  .partners {
+    margin-top: 80px;
+  }
   .partners-list {
     margin-top: 30px;
     transform: translateX(0);

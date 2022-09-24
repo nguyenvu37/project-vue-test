@@ -74,8 +74,8 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 950px;
-  margin-top: -150px;
+  height: 900px;
+  /* margin-top: -50px; */
   position: relative;
 }
 .footer-component {
@@ -145,7 +145,7 @@ footer .scroll {
     left: 1030px !important;
   }
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1320px) {
   .footer-component {
     padding: 0 16px;
     transform: translateY(300px);
@@ -203,6 +203,8 @@ footer .scroll {
   }
   footer .scroll img {
     width: 33px;
+    height: 22px;
+    margin-bottom: 6px;
   }
   footer .scroll p {
     font-size: 14px;
@@ -219,6 +221,33 @@ footer .scroll {
   .footer-down-list-img img {
     width: auto;
     margin-right: 40px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  footer {
+    margin-top: -50px;
+  }
+  .footer-down-left {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-down-left img {
+    width: 246px;
+  }
+  .footer-down-list-img {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 246px;
+    margin-left: 0;
+  }
+  .footer-down-list-img img {
+    object-fit: contain;
+  }
+  footer .scroll {
+    bottom: 60px;
+    left: 92% !important;
   }
 }
 </style>

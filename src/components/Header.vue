@@ -1,48 +1,20 @@
 <template>
   <header>
-    <div class="header-logo">
-      <img src="../assets/images/logo.svg" alt="logo" />
-    </div>
-    <div class="nav-full">
-      <ul class="nav-bar d-flex">
-        <li
-          :class="menu.isActive ? 'active' : ''"
-          v-for="menu in listMenu"
-          :key="menu.id"
-          @click="handleClickMenu(menu.id)"
-        >
-          <a class="col" :href="`#item${menu.id}`">{{ menu.value }}</a>
-        </li>
-      </ul>
-      <div class="language">
-        <div class="icon">
-          <img src="../assets/images/eng.png" alt="" />
-          <p>ENG</p>
-        </div>
-        <div class="icon-down">
-          <img src="../assets/images/icon_down.svg" alt="" />
-        </div>
+    <div class="header-content">
+      <div class="header-logo">
+        <img src="../assets/images/logo.svg" alt="logo" />
       </div>
-    </div>
-
-    <div class="nav-dropdown">
-      <div class="language">
-        <div class="icon">
-          <img src="../assets/images/eng.png" alt="" />
-          <p>ENG</p>
-        </div>
-        <div class="icon-down">
-          <img src="../assets/images/icon_down.svg" alt="" />
-        </div>
-      </div>
-      <img
-        src="../assets/images/icon_dropdown.png"
-        alt=""
-        @click="handleShowMenu()"
-      />
-    </div>
-    <div :class="['menu-dropdown', isMenu ? 'active' : '']">
-      <div class="menu-dropdown-header">
+      <div class="nav-full">
+        <ul class="nav-bar d-flex">
+          <li
+            :class="menu.isActive ? 'active' : ''"
+            v-for="menu in listMenu"
+            :key="menu.id"
+            @click="handleClickMenu(menu.id)"
+          >
+            <a class="col" :href="`#item${menu.id}`">{{ menu.value }}</a>
+          </li>
+        </ul>
         <div class="language">
           <div class="icon">
             <img src="../assets/images/eng.png" alt="" />
@@ -52,21 +24,51 @@
             <img src="../assets/images/icon_down.svg" alt="" />
           </div>
         </div>
-        <div class="icon" @click="handleShowMenu()">
-          <img src="../assets/images/close.png" alt="" />
-        </div>
       </div>
-      <div class="menu">
-        <ul class="nav-bar">
-          <li
-            :class="menu.isActive ? 'active' : ''"
-            v-for="menu in listMenu"
-            :key="menu.id"
-            @click="handleClickMenu(menu.id), handleShowMenu()"
-          >
-            <a class="col" :href="`#item${menu.id}`">{{ menu.value }}</a>
-          </li>
-        </ul>
+
+      <div class="nav-dropdown">
+        <div class="language">
+          <div class="icon">
+            <img src="../assets/images/eng.png" alt="" />
+            <p>ENG</p>
+          </div>
+          <div class="icon-down">
+            <img src="../assets/images/icon_down.svg" alt="" />
+          </div>
+        </div>
+        <img
+          src="../assets/images/icon_dropdown.png"
+          alt=""
+          @click="handleShowMenu()"
+        />
+      </div>
+      <div :class="['menu-dropdown', isMenu ? 'active' : '']">
+        <div class="menu-dropdown-header">
+          <div class="language">
+            <div class="icon">
+              <img src="../assets/images/eng.png" alt="" />
+              <p>ENG</p>
+            </div>
+            <div class="icon-down">
+              <img src="../assets/images/icon_down.svg" alt="" />
+            </div>
+          </div>
+          <div class="icon" @click="handleShowMenu()">
+            <img src="../assets/images/close.png" alt="" />
+          </div>
+        </div>
+        <div class="menu">
+          <ul class="nav-bar">
+            <li
+              :class="menu.isActive ? 'active' : ''"
+              v-for="menu in listMenu"
+              :key="menu.id"
+              @click="handleClickMenu(menu.id), handleShowMenu()"
+            >
+              <a class="col" :href="`#item${menu.id}`">{{ menu.value }}</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -112,14 +114,17 @@ header {
   position: fixed;
   top: 0;
   z-index: 1000;
-  margin: 0 auto;
-  display: flex;
-  align-content: center;
-  justify-content: center;
   padding-top: 42px;
   padding-bottom: 15px;
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
+}
+.header-content {
+  max-width: 1400px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin: 0 auto;
   transition: all 0.5s;
 }
 .header-logo {
@@ -148,7 +153,7 @@ ul li {
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
-  height: 20px;
+  height: 19px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -224,18 +229,29 @@ ul li.active:after {
     transform: translateX(-50%);
     left: 50%;
   }
+  .header-content {
+    max-width: 992px;
+  }
   ul li {
     margin-right: 20px;
   }
   .language {
     margin-left: 0;
   }
+  .language .icon-down img {
+    width: 12px;
+    height: 11px;
+    position: relative;
+    top: -1px;
+  }
 }
 @media only screen and (max-width: 992px) {
   header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header-content {
     justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
   }
   .header-logo img {
     width: 90px;
@@ -243,6 +259,11 @@ ul li.active:after {
   }
   .nav-full {
     display: none !important;
+  }
+  .language .icon p {
+    width: 39px;
+    margin-left: 5.25px;
+    margin-right: 3px;
   }
   .nav-dropdown {
     display: flex;
@@ -282,10 +303,14 @@ ul li.active:after {
     justify-content: space-between;
     padding: 19px 16px;
   }
+  .menu-dropdown-header .language {
+    width: 97.5px;
+    height: 36px;
+  }
   .menu-dropdown .menu {
     display: flex;
     justify-content: center;
-    margin-top: 46px;
+    margin-top: 27px;
   }
   .menu-dropdown ul {
     flex-direction: column;
@@ -305,6 +330,14 @@ ul li.active:after {
   }
   .menu-dropdown-header .icon {
     cursor: pointer;
+  }
+}
+@media only screen and (max-width: 376px) {
+  header {
+    padding-top: 19px;
+  }
+  .icon-blur {
+    bottom: -5%;
   }
 }
 </style>

@@ -87,6 +87,7 @@ export default {
 .clients {
   max-width: 1400px;
   margin: 0 auto;
+  margin-top: 80px;
 }
 .clients-content {
   margin-top: 80px;

@@ -206,6 +206,7 @@ export default {
   .location-bg img {
     width: 100%;
     height: 185px;
+    object-fit: cover;
   }
 
   .location-content-title {
@@ -220,7 +221,7 @@ export default {
     margin-bottom: 24px;
   }
   .location-content-text p {
-    padding: 0 22px;
+    padding: 0 23px;
   }
 }
 </style>

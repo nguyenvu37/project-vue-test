@@ -24,13 +24,13 @@
 </template>
 
 <script>
-import Location from './Location';
-import Product from './Product';
-import Partners from './Partners';
-import Clients from './Clients';
+import Location from "./Location";
+import Product from "./Product";
+import Partners from "./Partners";
+import Clients from "./Clients";
 
 export default {
-  name: 'MainLayout',
+  name: "MainLayout",
   components: { Location, Product, Partners, Clients },
   setup() {
     const handleScrollDown = () => {
@@ -205,7 +205,7 @@ export default {
     height: 414px;
   }
   .icon-blur {
-    bottom: -12%;
+    bottom: -15%;
     left: -2%;
   }
   .scroll {
