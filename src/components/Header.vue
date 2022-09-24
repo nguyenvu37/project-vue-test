@@ -73,19 +73,19 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Header',
+  name: "Header",
   setup() {
     const isMenu = ref(false);
     const listMenu = ref([
-      { id: 1, value: 'about us', isActive: false },
-      { id: 2, value: 'products', isActive: false },
-      { id: 3, value: 'partners', isActive: false },
-      { id: 4, value: 'our clients', isActive: false },
-      { id: 5, value: 'contact us', isActive: false },
+      { id: 1, value: "about us", isActive: false },
+      { id: 2, value: "products", isActive: false },
+      { id: 3, value: "partners", isActive: false },
+      { id: 4, value: "our clients", isActive: false },
+      { id: 5, value: "contact us", isActive: false },
     ]);
 
     const handleClickMenu = (id) => {
@@ -120,6 +120,7 @@ header {
   padding-bottom: 15px;
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
+  transition: all 0.5s;
 }
 .header-logo {
   cursor: pointer;
@@ -158,12 +159,12 @@ ul li:hover a {
 }
 ul li::after {
   transition: all 0.5s;
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
 }
 ul li.active:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
@@ -218,17 +219,16 @@ ul li.active:after {
   height: 100vh;
   background: #1a1c25;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1320px) {
   header {
     transform: translateX(-50%);
     left: 50%;
   }
-  .language {
-    margin-left: 0;
-  }
-
   ul li {
     margin-right: 20px;
+  }
+  .language {
+    margin-left: 0;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -251,7 +251,7 @@ ul li.active:after {
     cursor: pointer;
   }
   .nav-dropdown .language {
-    margin-right: 28px;
+    margin-right: 28.5px;
     width: 97.5px;
     height: 36px;
   }
