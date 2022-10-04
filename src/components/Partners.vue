@@ -1,38 +1,40 @@
 <template>
-  <div class="container-fluid" id="item3">
-    <div class="partners d-flex align-items-center">
-      <div class="partners-left flex-xl-grow-1">
-        <img src="../assets/images/partners.png" alt="" />
-      </div>
-      <div class="partners-right flex-xl-grow-1">
-        <div class="partners-content">
-          <div class="title">
-            <p class="name">BPLAY GAME</p>
-            <p class="section">partners</p>
-          </div>
-          <div class="text">
-            <p>
-              As a BPlay client you will benefit from content from more than 20
-              top tier providers. Based on your casino’s concept and targeted
-              markets, we will tailor the perfect portfolio of games to offer to
-              your players.
-            </p>
-          </div>
+  <section id="item3">
+    <div class="container-fluid">
+      <div class="partners d-flex align-items-center">
+        <div class="partners-left flex-xl-grow-1">
+          <img src="../assets/images/partners.png" alt="" />
         </div>
-        <div
-          class="partners-list d-flex align-items-center justify-content-around flex-wrap"
-        >
+        <div class="partners-right flex-xl-grow-1">
+          <div class="partners-content">
+            <div class="title">
+              <p class="name">BPLAY GAME</p>
+              <p class="section">partners</p>
+            </div>
+            <div class="text">
+              <p>
+                As a BPlay client you will benefit from content from more than
+                20 top tier providers. Based on your casino’s concept and
+                targeted markets, we will tailor the perfect portfolio of games
+                to offer to your players.
+              </p>
+            </div>
+          </div>
           <div
-            class="partners-item"
-            v-for="partner in partners"
-            :key="partner.id"
+            class="partners-list d-flex align-items-center justify-content-around flex-wrap"
           >
-            <img :src="require(`../assets/images/${partner.image}`)" alt="" />
+            <div
+              class="partners-item"
+              v-for="partner in partners"
+              :key="partner.id"
+            >
+              <img :src="require(`../assets/images/${partner.image}`)" alt="" />
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -102,11 +104,6 @@ export default {
     margin: 0 auto;
     transform: translateX(0);
   }
-}
-@media only screen and (max-width: 376px) {
-  .partners {
-    margin-top: 80px;
-  }
   .partners-list {
     margin-top: 30px;
     transform: translateX(0);
@@ -115,6 +112,11 @@ export default {
   .partners-item img {
     width: 110px;
     height: 45px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .partners {
+    margin-top: 80px;
   }
 }
 </style>

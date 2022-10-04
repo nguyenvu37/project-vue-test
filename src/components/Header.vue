@@ -4,25 +4,23 @@
       <div class="header-logo">
         <img src="../assets/images/logo.svg" alt="logo" />
       </div>
-      <div class="nav-full">
-        <ul class="nav-bar d-flex">
-          <li
-            :class="menu.isActive ? 'active' : ''"
-            v-for="menu in listMenu"
-            :key="menu.id"
-            @click="handleClickMenu(menu.id)"
-          >
-            <a class="col" :href="`#item${menu.id}`">{{ menu.value }}</a>
-          </li>
-        </ul>
-        <div class="language">
-          <div class="icon">
-            <img src="../assets/images/eng.png" alt="" />
-            <p>ENG</p>
-          </div>
-          <div class="icon-down">
-            <img src="../assets/images/icon_down.svg" alt="" />
-          </div>
+      <ul class="nav-bar nav-full">
+        <li
+          :class="menu.isActive ? 'active' : ''"
+          v-for="menu in listMenu"
+          :key="menu.id"
+          @click="handleClickMenu(menu.id)"
+        >
+          <a class="col" :href="`#item${menu.id}`">{{ menu.value }}</a>
+        </li>
+      </ul>
+      <div class="language lang-full">
+        <div class="icon">
+          <img src="../assets/images/eng.png" alt="" />
+          <p>ENG</p>
+        </div>
+        <div class="icon-down">
+          <img src="../assets/images/icon_down.svg" alt="" />
         </div>
       </div>
 
@@ -120,7 +118,7 @@ header {
   background: rgba(0, 0, 0, 0.8);
 }
 .header-content {
-  max-width: 1400px;
+  padding: 0 16.25rem;
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -135,6 +133,7 @@ ul {
   justify-content: center;
   align-items: center;
   margin-bottom: 0 !important;
+  padding-left: 0 !important;
 }
 ul li a {
   color: #fff;
@@ -145,7 +144,7 @@ ul li a:hover {
 }
 ul li {
   list-style: none;
-  margin-right: 56px;
+  margin-left: 3.5rem;
   font-size: 16px;
   font-weight: 700;
   line-height: 18.78px;
@@ -154,10 +153,8 @@ ul li {
   text-transform: uppercase;
   cursor: pointer;
   height: 19px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
+  margin-left: 1.875rem;
 }
 ul li:hover a {
   color: #c0c3ce;
@@ -185,7 +182,6 @@ ul li.active:after {
   border-radius: 100px;
   width: 130px;
   height: 48px;
-  margin-left: 172px;
   cursor: pointer;
 }
 .language .icon {
@@ -208,11 +204,7 @@ ul li.active:after {
   position: relative;
   top: -2px;
 }
-.nav-full {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
+
 .nav-dropdown {
   display: none;
 }
@@ -224,20 +216,17 @@ ul li.active:after {
   height: 100vh;
   background: #1a1c25;
 }
-@media only screen and (max-width: 1320px) {
-  header {
-    transform: translateX(-50%);
-    left: 50%;
-  }
+
+@media only screen and (max-width: 1700px) {
   .header-content {
-    max-width: 992px;
+    padding: 0 8rem;
   }
   ul li {
-    margin-right: 20px;
+    margin-left: 1.3rem;
   }
-  .language {
-    margin-left: 0;
-  }
+}
+
+@media only screen and (max-width: 1400px) {
   .language .icon-down img {
     width: 12px;
     height: 11px;
@@ -245,10 +234,10 @@ ul li.active:after {
     top: -1px;
   }
 }
-@media only screen and (max-width: 992px) {
+
+@media only screen and (max-width: 1200px) {
   header {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-top: 19px;
   }
   .header-content {
     justify-content: space-between;
@@ -257,7 +246,8 @@ ul li.active:after {
     width: 90px;
     height: 31px;
   }
-  .nav-full {
+  .nav-full,
+  .lang-full {
     display: none !important;
   }
   .language .icon p {
@@ -332,10 +322,19 @@ ul li.active:after {
     cursor: pointer;
   }
 }
-@media only screen and (max-width: 376px) {
+
+@media only screen and (max-width: 960px) {
   header {
+    padding-left: 16px;
+    padding-right: 16px;
     padding-top: 19px;
   }
+  .header-content {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 376px) {
   .icon-blur {
     bottom: -5%;
   }

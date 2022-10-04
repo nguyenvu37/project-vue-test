@@ -44,12 +44,12 @@
           </p>
         </div>
       </div>
-      <div class="scroll" @click="handleScrollTop">
-        <div class="icon d-flex align-items-center justify-content-center">
-          <img src="../assets/images/icon_scroll_u.svg" alt="" />
-        </div>
-        <p>Top</p>
+    </div>
+    <div class="scroll" @click="handleScrollTop">
+      <div class="icon d-flex align-items-center justify-content-center">
+        <img src="../assets/images/icon_scroll_u.svg" alt="" />
       </div>
+      <p>Top</p>
     </div>
   </footer>
 </template>
@@ -74,12 +74,12 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 900px;
-  /* margin-top: -50px; */
+  height: 830px;
   position: relative;
 }
 .footer-component {
-  max-width: 1400px;
+  /* max-width: 1400px; */
+  padding: 0 16.25rem;
   margin: 0 auto;
   transform: translateY(438px);
   position: relative;
@@ -132,23 +132,22 @@ footer {
   color: #fff;
 }
 footer .scroll {
-  left: 1500px;
-  bottom: 40px;
+  right: 5%;
+  bottom: 10%;
+  left: inherit;
 }
 
 @media only screen and (max-width: 1700px) {
   .footer-component {
-    max-width: 992px;
+    padding: 0 8rem;
   }
-
   footer .scroll {
-    left: 1030px !important;
+    right: 2%;
   }
 }
-@media only screen and (max-width: 1320px) {
+@media only screen and (max-width: 1400px) {
   .footer-component {
-    padding: 0 16px;
-    transform: translateY(300px);
+    transform: translateY(170px);
   }
   .footer-up {
     flex-direction: column;
@@ -175,11 +174,12 @@ footer .scroll {
     color: #cecece;
     margin-top: 10px;
   }
-  footer .scroll {
-    left: 710px !important;
-  }
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 960px) {
+  .footer-component {
+    padding: 0 16px;
+    transform: translateY(250px);
+  }
   .footer-logo img {
     width: 118px;
     height: 40px;
@@ -196,14 +196,12 @@ footer .scroll {
     width: 40px;
   }
   footer .scroll {
-    left: 80% !important;
-    bottom: 15%;
     width: 33px;
     height: 44px;
   }
   footer .scroll img {
-    width: 33px;
-    height: 22px;
+    width: 33px !important;
+    height: 22px !important;
     margin-bottom: 6px;
   }
   footer .scroll p {
@@ -221,6 +219,10 @@ footer .scroll {
   .footer-down-list-img img {
     width: auto;
     margin-right: 40px;
+  }
+  footer .scroll {
+    bottom: 8%;
+    right: 0;
   }
 }
 @media only screen and (max-width: 376px) {
@@ -245,9 +247,8 @@ footer .scroll {
   .footer-down-list-img img {
     object-fit: contain;
   }
-  footer .scroll {
-    bottom: 60px;
-    left: 92% !important;
+  .footer-down-right p {
+    font-size: 12px;
   }
 }
 </style>

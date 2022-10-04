@@ -1,48 +1,50 @@
 <template>
-  <div class="product" id="item2">
-    <div class="product-bg"></div>
-    <div class="product-content container-fluid">
-      <div class="product-content-text">
-        <div class="row">
-          <div class="title col-lg-4">
-            <p class="name">BPLAY GAME</p>
-            <p class="section">OUR PRODUCTS</p>
-          </div>
-          <div class="text col-lg-8">
-            <p>
-              BPlay’s high quality iGaming Platform offers a complete solution
-              for your casino. Get the full White Label turnkey solution or the
-              Seamless API with our comprehensive selection of games. Through
-              our global network of premium partners such as Vivo Gaming, SBTech
-              and HoGaming you will have access to the best Live Casino,
-              Sportsbook, Slots, Table Games, Number Games and Fishing Games on
-              the market.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-content-list">
-        <div class="row">
-          <div
-            class="product-content-item col-xxl-4 col-lg-6"
-            v-for="product in products"
-            :key="product.id"
-          >
-            <img :src="require(`../assets/images/${product.image}`)" alt="" />
-            <div class="product-content-item-name">
-              <p>{{ product.name }}</p>
+  <section id="item2">
+    <div class="product">
+      <div class="product-bg"></div>
+      <div class="product-content">
+        <div class="product-content-text">
+          <div class="row">
+            <div class="title col-xl-4">
+              <p class="name">BPLAY GAME</p>
+              <p class="section">OUR PRODUCTS</p>
             </div>
-            <p>{{ product.information }}</p>
+            <div class="text col-xl-8">
+              <p>
+                BPlay’s high quality iGaming Platform offers a complete solution
+                for your casino. Get the full White Label turnkey solution or
+                the Seamless API with our comprehensive selection of games.
+                Through our global network of premium partners such as Vivo
+                Gaming, SBTech and HoGaming you will have access to the best
+                Live Casino, Sportsbook, Slots, Table Games, Number Games and
+                Fishing Games on the market.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="product-content-slide">
-        <Slider :products="products" />
+        <div class="product-content-list">
+          <div class="row">
+            <div
+              class="product-content-item col-sm-4 col-6"
+              v-for="product in products"
+              :key="product.id"
+            >
+              <img :src="require(`../assets/images/${product.image}`)" alt="" />
+              <div class="product-content-item-name">
+                <p>{{ product.name }}</p>
+              </div>
+              <p>{{ product.information }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-content-slide">
+          <Slider :products="products" />
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -139,7 +141,7 @@ export default {
   transform: translateY(100px);
 }
 .product-content {
-  max-width: 1400px;
+  padding: 0 16.25rem !important;
   transform: translateY(-300px);
 }
 .product-content-text {
@@ -156,8 +158,7 @@ export default {
   flex-direction: column;
 }
 .product-content-item img {
-  width: 435px;
-  height: 446px;
+  max-width: 100%;
 }
 .product-content-item img:hover {
   transform: translateY(-10px);
@@ -169,8 +170,7 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 339px;
-  height: 54px;
+  width: 100%;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -201,26 +201,23 @@ export default {
 .product-content-slide {
   display: none;
 }
-@media only screen and (max-width: 992px) {
-  .product-content-text .title p,
-  .product-content-text .text p {
-    text-align: center !important;
-    margin-bottom: 51px;
+@media only screen and (max-width: 1700px) {
+  .product-content {
+    padding: 0 8rem !important;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .product-content-item .product-content-item-name p {
+    font-size: 16px;
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .product-content {
+    padding: 0 16px !important;
   }
 }
 @media only screen and (max-width: 576px) {
-  .product-content-item img {
-    width: 280px !important;
-    height: 270px;
-  }
-  .product-content-item {
-    width: 280px !important;
-    display: flex;
-  }
-  .product-content-item-name {
-    width: 250px !important;
-    height: 33.36px !important;
-  }
   .product-content-item-name p {
     font-size: 16px !important;
     line-height: 18.78px !important;

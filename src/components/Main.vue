@@ -1,22 +1,24 @@
 <template>
-  <div class="main">
-    <div class="main-image">
-      <div class="bg-red"></div>
-      <div class="bg-blur"></div>
-      <div class="bg-image"></div>
-      <div class="icon-blur"></div>
-    </div>
-    <div class="main-text">
-      <p>casino</p>
-      <p>playgame</p>
-    </div>
-    <div class="scroll" @click="handleScrollDown">
-      <p>Scroll</p>
-      <div class="icon d-flex align-items-center justify-content-center">
-        <img src="../assets/images/icon_scroll_d.svg" alt="" />
+  <section id="main">
+    <div class="main">
+      <div class="main-image">
+        <div class="bg-red"></div>
+        <div class="bg-blur"></div>
+        <div class="bg-image"></div>
+        <div class="icon-blur"></div>
+      </div>
+      <div class="main-text">
+        <p>casino</p>
+        <p>playgame</p>
+      </div>
+      <div class="scroll" @click="handleScrollDown">
+        <p>Scroll</p>
+        <div class="icon d-flex align-items-center justify-content-center">
+          <img src="../assets/images/icon_scroll_d.svg" alt="" />
+        </div>
       </div>
     </div>
-  </div>
+  </section>
   <Location />
   <Product />
   <Partners />
@@ -183,15 +185,25 @@ export default {
   .bg-blur {
     height: 900px;
   }
-  .scroll {
-    bottom: 120px;
+
+  .scroll img {
+    width: 21.19px !important;
+    height: 15.14px !important;
+    margin: 0 auto;
+  }
+  .scroll p {
+    font-size: 12px !important;
+    line-height: 14.09px !important;
+    margin-bottom: 0px !important;
   }
 }
 @media only screen and (max-width: 376px) {
   .main {
     height: 400px;
   }
-
+  .scroll {
+    bottom: 61px;
+  }
   .main .bg-image {
     height: 400px;
     object-fit: contain;
@@ -207,21 +219,6 @@ export default {
   .icon-blur {
     bottom: -15%;
     left: -2%;
-  }
-  .scroll {
-    bottom: 61px;
-  }
-  .scroll img {
-    width: 21.19px;
-    height: 15.14px;
-    margin: 0 auto;
-  }
-  .scroll p {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14.09px;
-    text-align: center;
-    margin-bottom: 0px;
   }
 }
 </style>

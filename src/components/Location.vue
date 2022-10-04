@@ -1,36 +1,36 @@
 <template>
-  <div class="location" id="item1">
-    <div class="location-content">
-      <div class="location-content-title">BPLAY GAME</div>
-      <div class="location-content-suggest">WHO WE ARE?</div>
-      <div class="location-content-text">
-        <p>
-          BPlay was founded in 2015 by a group of highly skilled professionals
-          with over 15 years of experience in the
-        </p>
-        <p>
-          iGaming industry. Today we are an international company with more than
-          100 employees and have operations
-        </p>
-        <p>in Malta, Ukraine, Romania, Norway, India, Myanmar and Taiwan...</p>
-      </div>
-    </div>
-    <div class="location-bg">
-      <img src="../assets/images/maps.png" alt="" />
-    </div>
-    <div class="location-building">
-      <div class="location-building-content">
-        <div class="location-building-content-title">
-          <p>15</p>
-          <p>years</p>
-        </div>
-        <div class="location-building-content-text">
-          <p>of experience</p>
-          <p>{{ `in the ` }}<span>iGaming</span></p>
+  <section id="item1">
+    <div class="location">
+      <div class="location-content">
+        <div class="location-content-title">BPLAY GAME</div>
+        <div class="location-content-suggest">WHO WE ARE?</div>
+        <div class="location-content-text">
+          <p>
+            BPlay was founded in 2015 by a group of highly skilled professionals
+            with over 15 years of experience in the iGaming industry. Today we
+            are an international company with more than 100 employees and have
+            operations in Malta, Ukraine, Romania, Norway, India, Myanmar and
+            Taiwan...
+          </p>
         </div>
       </div>
+      <div class="location-bg">
+        <img src="../assets/images/maps.png" alt="" />
+      </div>
+      <div class="location-building">
+        <div class="location-building-content">
+          <div class="location-building-content-title">
+            <p>15</p>
+            <p>years</p>
+          </div>
+          <div class="location-building-content-text">
+            <p>of experience</p>
+            <p>{{ `in the ` }}<span>iGaming</span></p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -50,6 +50,7 @@ export default {
   width: 100%;
   text-align: center;
   margin-top: 86.62px;
+  padding: 0 548px;
 }
 .location-content-title {
   font-size: 24px;
@@ -71,6 +72,7 @@ export default {
   font-weight: 400;
   line-height: 32px;
   margin-bottom: 0;
+  color: #eaeaea;
 }
 .location-bg {
   width: 100%;
@@ -85,7 +87,6 @@ export default {
   margin: 0 auto;
 }
 .location-building {
-  /* transform: translateY(-230px); */
   position: relative;
   background: url(../assets/images/buildings.png);
   background-position: center;
@@ -93,6 +94,9 @@ export default {
   background-size: cover;
   width: 100%;
   height: 628px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 .location-building-content {
   width: 357px;
@@ -156,7 +160,18 @@ export default {
   color: #f41616;
 }
 
+@media only screen and (max-width: 1400px) {
+  .location-content {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
 @media only screen and (max-width: 960px) {
+  .location-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   .location-bg img {
     width: 100%;
   }
@@ -169,7 +184,9 @@ export default {
   .location-building-content {
     width: 253px;
     height: 281px;
-    top: 70px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   .location-building {
     transform: translateY(0);
@@ -198,8 +215,6 @@ export default {
     font-size: 18px;
     line-height: 22.59px;
   }
-}
-@media only screen and (max-width: 376px) {
   .location-bg {
     transform: translateY(0);
   }
@@ -220,8 +235,11 @@ export default {
     letter-spacing: 1px;
     margin-bottom: 24px;
   }
-  .location-content-text p {
-    padding: 0 23px;
+}
+
+@media only screen and (max-width: 376px) {
+  .location-content {
+    padding: 0 22px;
   }
 }
 </style>

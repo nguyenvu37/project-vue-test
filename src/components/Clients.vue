@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid" id="item4">
+  <section id="item4">
     <div class="clients">
       <div class="row">
         <div class="d-flex align-items-center justify-content-center">
@@ -15,7 +15,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -85,9 +85,9 @@ export default {
 
 <style>
 .clients {
-  max-width: 1400px;
   margin: 0 auto;
   margin-top: 80px;
+  padding: 0 16.25rem;
 }
 .clients-content {
   margin-top: 80px;
@@ -101,10 +101,28 @@ export default {
   padding-right: 0 !important;
 }
 .clients-item img {
-  width: 249px;
-  height: 146px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 1700px) {
+  .clients {
+    padding: 0 8rem;
+  }
+  .clients-content {
+    justify-content: space-between;
+    padding: 0 16px !important;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .clients {
+    padding: 0 16px;
+  }
+  .clients-content {
+    column-gap: 5px;
+    row-gap: 30px;
+  }
   .clients {
     margin-top: 90px !important;
   }
@@ -114,14 +132,13 @@ export default {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     row-gap: 22px;
-    column-gap: 20px;
-    width: 90% !important;
-    margin: 38px auto;
+    column-gap: 22px;
   }
   .clients-item img {
-    width: 100px;
-    height: 60px;
-    object-fit: cover;
+    width: 100%;
+    border-radius: 4px;
   }
+}
+@media only screen and (max-width: 376px) {
 }
 </style>

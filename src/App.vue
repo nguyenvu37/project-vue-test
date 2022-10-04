@@ -36,6 +36,8 @@ export default {
   color: #ff3232;
   margin-bottom: 8px;
   text-transform: uppercase;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .title .section {
@@ -45,6 +47,8 @@ export default {
   text-align: left;
   text-transform: uppercase;
   color: #fff;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .text p {
@@ -54,6 +58,8 @@ export default {
   letter-spacing: 1px;
   color: #eaeaea;
   font-family: "Mulish", "sans-serif";
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .scroll {
@@ -85,15 +91,12 @@ export default {
   margin-bottom: 7px;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 960px) {
   .title .name,
   .title .section,
   .text p {
     text-align: center;
-    padding: 0 17px;
   }
-}
-@media only screen and (max-width: 376px) {
   .title .name {
     font-size: 12px;
     font-weight: 400;
@@ -111,6 +114,8 @@ export default {
     font-weight: 400;
     line-height: 32px;
   }
+}
+@media only screen and (max-width: 376px) {
   .scroll img {
     width: 21.19px;
     height: 15.14px;
