@@ -24,22 +24,22 @@
   </swiper>
 </template>
 <script>
-import { Swiper, SwiperSlide } from "swiper/vue";
+import { Swiper, SwiperSlide } from 'swiper/vue';
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
+import 'swiper/css';
+import 'swiper/css/pagination';
 
-import { Pagination } from "swiper";
+import { Pagination } from 'swiper';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Slider",
+  name: 'Slider',
   components: {
     Swiper,
     SwiperSlide,
   },
-  props: ["products"],
+  props: ['products'],
   setup() {
     return {
       modules: [Pagination],
@@ -71,7 +71,7 @@ export default {
   object-fit: cover;
 }
 .slider-content .slider-name {
-  background: url("../assets/images/bg_name_casino.svg");
+  background: url('../assets/images/bg_name_casino.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -99,7 +99,7 @@ export default {
   font-size: 14px;
   font-weight: 600;
   line-height: 26px;
-  font-family: "Mulish", "sans-serif";
+  font-family: 'Mulish', 'sans-serif';
   color: #fff;
   text-align: center;
 }
@@ -108,7 +108,7 @@ export default {
   cursor: pointer;
 }
 .swiper-pagination {
-  bottom: 50px;
+  bottom: 75px !important;
 }
 .swiper-pagination-bullet {
   border-radius: 0;
