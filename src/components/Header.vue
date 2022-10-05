@@ -16,7 +16,11 @@
           <a :href="`#item${menu.id}`">{{ menu.value }}</a>
         </li>
       </ul>
-      <div class="language lang-full" @click="handleShowLanguage()">
+      <div
+        class="language lang-full"
+        @click="handleShowLanguage()"
+        v-click-outside="onClickOutside"
+      >
         <div v-if="!isShowLanguage" class="list-language">
           <div class="icon">
             <img :src="require(`../assets/images/${language}.png`)" alt="" />
@@ -161,6 +165,10 @@ export default {
         .map((menu) => (menu.isActive = false));
     };
 
+    const onClickOutside = () => {
+      isShowLanguage.value = !isShowLanguage.value;
+    };
+
     const handleShowMenu = () => {
       isMenu.value = !isMenu.value;
     };
@@ -174,6 +182,7 @@ export default {
       handleShowLanguage,
       language,
       handleChangeLanguage,
+      onClickOutside,
     };
   },
 };

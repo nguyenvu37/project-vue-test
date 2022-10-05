@@ -24,22 +24,22 @@
   </swiper>
 </template>
 <script>
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Swiper, SwiperSlide } from "swiper/vue";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/pagination";
 
-import { Pagination } from 'swiper';
+import { Pagination } from "swiper";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Slider',
+  name: "Slider",
   components: {
     Swiper,
     SwiperSlide,
   },
-  props: ['products'],
+  props: ["products"],
   setup() {
     return {
       modules: [Pagination],
@@ -50,14 +50,14 @@ export default {
 
 <style>
 .swiper {
-  width: 100%;
+  width: 100vw;
   height: 500px;
-  margin-left: 16px;
+  padding-right: 2rem;
 }
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   width: 253px;
   display: flex;
   justify-content: center;
@@ -71,7 +71,7 @@ export default {
   object-fit: cover;
 }
 .slider-content .slider-name {
-  background: url('../assets/images/bg_name_casino.svg');
+  background: url("../assets/images/bg_name_casino.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -83,7 +83,7 @@ export default {
   margin: 18px auto 11px;
 }
 .slider-name p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 18.78px;
   letter-spacing: 1px;
@@ -96,10 +96,10 @@ export default {
   justify-content: center;
 }
 .slider-information p {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 26px;
-  font-family: 'Mulish', 'sans-serif';
+  font-family: "Mulish", "sans-serif";
   color: #fff;
   text-align: center;
 }

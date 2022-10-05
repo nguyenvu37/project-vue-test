@@ -10,15 +10,15 @@
 </template>
 
 <script>
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import Loading from './components/Loading';
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
+import Loading from "./components/Loading";
 
-import { ref } from 'vue';
+import { ref } from "vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Header,
     Main,
@@ -40,7 +40,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   background-color: #15161e;
 }
 
@@ -75,7 +75,7 @@ export default {
   line-height: 30px;
   letter-spacing: 1px;
   color: #eaeaea;
-  font-family: 'Mulish', 'sans-serif';
+  font-family: "Mulish", "sans-serif";
   padding-left: 0 !important;
   padding-right: 0 !important;
   margin-top: 24px;
