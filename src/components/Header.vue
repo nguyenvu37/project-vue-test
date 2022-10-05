@@ -2,7 +2,9 @@
   <header>
     <div class="header-content">
       <div class="header-logo">
-        <img src="../assets/images/logo.svg" alt="logo" />
+        <a href="#">
+          <img src="../assets/images/logo.svg" alt="logo" />
+        </a>
       </div>
       <ul class="nav-bar nav-full">
         <li
@@ -11,7 +13,7 @@
           :key="menu.id"
           @click="handleClickMenu(menu.id)"
         >
-          <a class="col" :href="`#item${menu.id}`">{{ menu.value }}</a>
+          <a :href="`#item${menu.id}`">{{ menu.value }}</a>
         </li>
       </ul>
       <div class="language lang-full" @click="handleShowLanguage()">
@@ -197,6 +199,9 @@ header {
 }
 .header-logo {
   cursor: pointer;
+}
+.header-logo:hover img {
+  opacity: 0.8;
 }
 ul {
   display: flex;

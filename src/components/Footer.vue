@@ -3,7 +3,9 @@
     <div class="footer-component" id="item5">
       <div class="footer-up d-flex align-item-center justify-content-between">
         <div class="footer-logo">
-          <img src="../assets/images/logo_footer.svg" alt="" />
+          <a href="#">
+            <img src="../assets/images/logo_footer.svg" alt="" />
+          </a>
         </div>
         <div class="footer-contact d-flex justify-content-start flex-column">
           <div class="footer-contact-title">CONTACT US</div>
@@ -57,7 +59,7 @@
 <script>
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Footer',
+  name: "Footer",
   setup() {
     const handleScrollTop = () => window.scrollTo(0, 0);
 
@@ -78,7 +80,6 @@ footer {
   position: relative;
 }
 .footer-component {
-  /* max-width: 1400px; */
   padding: 0 16.25rem;
   margin: 0 auto;
   transform: translateY(438px);
@@ -91,6 +92,10 @@ footer {
 .footer-logo img {
   width: 241px;
   height: 82px;
+  cursor: pointer;
+}
+.footer-logo:hover img {
+  opacity: 0.8;
 }
 .footer-contact-title {
   font-size: 34px;
