@@ -17,30 +17,24 @@
       <div class="language lang-full" @click="handleShowLanguage()">
         <div v-if="!isShowLanguage" class="list-language">
           <div class="icon">
-            <img src="../assets/images/eng.png" alt="" />
-            <p>ENG</p>
+            <img :src="require(`../assets/images/${language}.png`)" alt="" />
+            <p>{{ language }}</p>
           </div>
           <div class="icon-down">
             <img src="../assets/images/icon_down.svg" alt="" />
           </div>
         </div>
         <div v-if="isShowLanguage" class="list-language-full">
-          <div class="list-language">
+          <div class="list-language" @click="handleChangeLanguage('ENG')">
             <div class="icon">
-              <img src="../assets/images/eng.png" alt="" />
+              <img src="../assets/images/ENG.png" alt="" />
               <p>ENG</p>
             </div>
-            <div class="icon-down">
-              <img src="../assets/images/icon_down.svg" alt="" />
-            </div>
           </div>
-          <div class="list-language">
+          <div class="list-language" @click="handleChangeLanguage('VN')">
             <div class="icon">
-              <img src="../assets/images/vietnam.png" alt="" />
+              <img src="../assets/images/VN.png" alt="" />
               <p>VN</p>
-            </div>
-            <div class="icon-down">
-              <img src="../assets/images/icon_down.svg" alt="" />
             </div>
           </div>
         </div>
@@ -48,13 +42,27 @@
 
       <div class="nav-dropdown">
         <div class="language" @click="handleShowLanguage()">
-          <div class="list-language">
+          <div v-if="!isShowLanguage" class="list-language">
             <div class="icon">
-              <img src="../assets/images/eng.png" alt="" />
-              <p>ENG</p>
+              <img :src="require(`../assets/images/${language}.png`)" alt="" />
+              <p>{{ language }}</p>
             </div>
             <div class="icon-down">
               <img src="../assets/images/icon_down.svg" alt="" />
+            </div>
+          </div>
+          <div v-if="isShowLanguage" class="list-language-full">
+            <div class="list-language" @click="handleChangeLanguage('ENG')">
+              <div class="icon">
+                <img src="../assets/images/ENG.png" alt="" />
+                <p>ENG</p>
+              </div>
+            </div>
+            <div class="list-language" @click="handleChangeLanguage('VN')">
+              <div class="icon">
+                <img src="../assets/images/VN.png" alt="" />
+                <p>VN</p>
+              </div>
             </div>
           </div>
         </div>
@@ -67,13 +75,30 @@
       <div :class="['menu-dropdown', isMenu ? 'active' : '']">
         <div class="menu-dropdown-header">
           <div class="language" @click="handleShowLanguage()">
-            <div class="list-language">
+            <div v-if="!isShowLanguage" class="list-language">
               <div class="icon">
-                <img src="../assets/images/eng.png" alt="" />
-                <p>ENG</p>
+                <img
+                  :src="require(`../assets/images/${language}.png`)"
+                  alt=""
+                />
+                <p>{{ language }}</p>
               </div>
               <div class="icon-down">
                 <img src="../assets/images/icon_down.svg" alt="" />
+              </div>
+            </div>
+            <div v-if="isShowLanguage" class="list-language-full">
+              <div class="list-language" @click="handleChangeLanguage('ENG')">
+                <div class="icon">
+                  <img src="../assets/images/ENG.png" alt="" />
+                  <p>ENG</p>
+                </div>
+              </div>
+              <div class="list-language" @click="handleChangeLanguage('VN')">
+                <div class="icon">
+                  <img src="../assets/images/VN.png" alt="" />
+                  <p>VN</p>
+                </div>
               </div>
             </div>
           </div>
@@ -99,24 +124,29 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Header',
+  name: "Header",
   setup() {
     const isMenu = ref(false);
     const isShowLanguage = ref(false);
+    const language = ref("ENG");
     const listMenu = ref([
-      { id: 1, value: 'about us', isActive: false },
-      { id: 2, value: 'products', isActive: false },
-      { id: 3, value: 'partners', isActive: false },
-      { id: 4, value: 'our clients', isActive: false },
-      { id: 5, value: 'contact us', isActive: false },
+      { id: 1, value: "about us", isActive: false },
+      { id: 2, value: "products", isActive: false },
+      { id: 3, value: "partners", isActive: false },
+      { id: 4, value: "our clients", isActive: false },
+      { id: 5, value: "contact us", isActive: false },
     ]);
 
     const handleShowLanguage = () => {
       isShowLanguage.value = !isShowLanguage.value;
+    };
+
+    const handleChangeLanguage = (lang) => {
+      language.value = lang;
     };
 
     const handleClickMenu = (id) => {
@@ -140,6 +170,8 @@ export default {
       handleShowMenu,
       isShowLanguage,
       handleShowLanguage,
+      language,
+      handleChangeLanguage,
     };
   },
 };
@@ -199,12 +231,12 @@ ul li:hover a {
 }
 ul li::after {
   transition: all 0.5s;
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
 }
 ul li.active:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
@@ -232,6 +264,10 @@ ul li.active:after {
   display: flex;
   align-items: center;
 }
+.language .icon img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
 .language .icon p {
   font-size: 16px;
   font-weight: 600;
@@ -256,6 +292,17 @@ ul li.active:after {
   position: absolute;
   top: 0;
   transition: all 0.5s ease-in;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 4px;
+  animation: dropdownLanguage 0.5s ease-in-out;
+}
+@keyframes dropdownLanguage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .list-language-full .list-language {
   border: none;
@@ -315,6 +362,9 @@ ul li.active:after {
     padding: 8px;
     width: 97.5px;
     height: 36px;
+  }
+  .list-language-full {
+    width: 97.5px;
   }
   .nav-dropdown {
     display: flex;
