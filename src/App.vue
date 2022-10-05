@@ -1,29 +1,46 @@
 <template>
-  <div class="body">
+  <div v-if="!isLoading" class="body">
     <Header />
     <Main />
     <Footer />
   </div>
+  <div v-if="isLoading" class="loading">
+    <Loading />
+  </div>
 </template>
 
 <script>
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
+import Loading from './components/Loading';
+
+import { ref } from 'vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     Header,
     Main,
     Footer,
+    Loading,
+  },
+  setup() {
+    const isLoading = ref(true);
+    setTimeout(() => {
+      isLoading.value = false;
+    }, 1000);
+
+    return {
+      isLoading,
+    };
   },
 };
 </script>
 
 <style>
 #app {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   background-color: #15161e;
 }
 
@@ -58,7 +75,7 @@ export default {
   line-height: 30px;
   letter-spacing: 1px;
   color: #eaeaea;
-  font-family: "Mulish", "sans-serif";
+  font-family: 'Mulish', 'sans-serif';
   padding-left: 0 !important;
   padding-right: 0 !important;
   margin-top: 24px;
@@ -91,6 +108,14 @@ export default {
   width: 51px;
   height: 35px;
   margin-bottom: 7px;
+}
+
+.loading {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 960px) {
