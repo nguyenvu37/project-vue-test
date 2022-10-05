@@ -19,60 +19,60 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref } from 'vue';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Clients",
+  name: 'Clients',
   setup() {
     const clients = ref([
       {
         id: 1,
-        image: "galaxy.png",
+        image: 'galaxy.png',
       },
       {
         id: 2,
-        image: "riche88.png",
+        image: 'riche88.png',
       },
       {
         id: 3,
-        image: "xpj.png",
+        image: 'xpj.png',
       },
       {
         id: 4,
-        image: "bet365.svg",
+        image: 'bet365.svg',
       },
       {
         id: 5,
-        image: "betfair.png",
+        image: 'betfair.png',
       },
       {
         id: 6,
-        image: "betway.png",
+        image: 'betway.png',
       },
       {
         id: 7,
-        image: "bwin.png",
+        image: 'bwin.png',
       },
       {
         id: 8,
-        image: "williamhill.png",
+        image: 'williamhill.png',
       },
       {
         id: 9,
-        image: "sanos.png",
+        image: 'sanos.png',
       },
       {
         id: 10,
-        image: "venetian.png",
+        image: 'venetian.png',
       },
       {
         id: 11,
-        image: "5.png",
+        image: '5.png',
       },
       {
         id: 12,
-        image: "allwin.png",
+        image: 'allwin.png',
       },
     ]);
 
@@ -129,7 +129,7 @@ export default {
     column-gap: 22px;
   }
   .clients {
-    margin-top: 90px !important;
+    margin-top: 75px;
   }
   .clients-item img {
     width: 100%;

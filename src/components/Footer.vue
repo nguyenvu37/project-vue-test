@@ -33,9 +33,9 @@
         <div class="footer-down-left d-flex align-item-center">
           <img src="../assets/images/mga.svg" alt="" />
           <div class="footer-down-list-img">
-            <img src="../assets/images/sabs.png" alt="" />
-            <img src="../assets/images/curacao.png" alt="" />
-            <img src="../assets/images/itech.png" alt="" />
+            <img src="../assets/images/sabs.svg" alt="" />
+            <img src="../assets/images/curacao.svg" alt="" />
+            <img src="../assets/images/itech.svg" alt="" />
           </div>
         </div>
         <div class="footer-down-right">
@@ -57,7 +57,7 @@
 <script>
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Footer",
+  name: 'Footer',
   setup() {
     const handleScrollTop = () => window.scrollTo(0, 0);
 

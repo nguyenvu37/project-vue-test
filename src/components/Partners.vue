@@ -3,7 +3,8 @@
     <div class="container-fluid">
       <div class="partners d-flex align-items-center">
         <div class="partners-left flex-xl-grow-1">
-          <img src="../assets/images/partners.png" alt="" />
+          <img src="../assets/images/partners.png" alt="" class="full" />
+          <img src="../assets/images/partners1.png" alt="" class="small" />
         </div>
         <div class="partners-right flex-xl-grow-1">
           <div class="partners-content">
@@ -38,32 +39,32 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref } from 'vue';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Partners",
+  name: 'Partners',
   setup() {
     const partners = ref([
       {
         id: 1,
-        image: "sbtech.png",
+        image: 'sbtech.png',
       },
       {
         id: 2,
-        image: "iovation.png",
+        image: 'iovation.png',
       },
       {
         id: 3,
-        image: "seon.png",
+        image: 'seon.png',
       },
       {
         id: 4,
-        image: "hogaming.png",
+        image: 'hogaming.png',
       },
       {
         id: 5,
-        image: "vivo.png",
+        image: 'vivo.png',
       },
     ]);
 
@@ -86,13 +87,18 @@ export default {
   max-width: 738px;
   transform: translateX(-40px);
 }
+.partners-left .small {
+  display: none;
+}
 @media only screen and (max-width: 1400px) {
   .partners {
     flex-direction: column;
   }
   .partners-left {
     order: 2;
-    margin-top: 40px;
+    margin-top: 20px;
+    width: 100%;
+    transform: translateX(-20px);
   }
   .partners-right {
     order: 1;
@@ -103,6 +109,7 @@ export default {
     width: 100%;
     height: auto;
   }
+
   .partners-list {
     margin: 0 auto;
     transform: translateX(0);
@@ -115,6 +122,14 @@ export default {
   .partners-item img {
     width: 110px;
     height: 45px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .partners-left .full {
+    display: none;
+  }
+  .partners-left .small {
+    display: block;
   }
 }
 @media only screen and (max-width: 376px) {

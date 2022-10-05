@@ -14,24 +14,48 @@
           <a class="col" :href="`#item${menu.id}`">{{ menu.value }}</a>
         </li>
       </ul>
-      <div class="language lang-full">
-        <div class="icon">
-          <img src="../assets/images/eng.png" alt="" />
-          <p>ENG</p>
-        </div>
-        <div class="icon-down">
-          <img src="../assets/images/icon_down.svg" alt="" />
-        </div>
-      </div>
-
-      <div class="nav-dropdown">
-        <div class="language">
+      <div class="language lang-full" @click="handleShowLanguage()">
+        <div v-if="!isShowLanguage" class="list-language">
           <div class="icon">
             <img src="../assets/images/eng.png" alt="" />
             <p>ENG</p>
           </div>
           <div class="icon-down">
             <img src="../assets/images/icon_down.svg" alt="" />
+          </div>
+        </div>
+        <div v-if="isShowLanguage" class="list-language-full">
+          <div class="list-language">
+            <div class="icon">
+              <img src="../assets/images/eng.png" alt="" />
+              <p>ENG</p>
+            </div>
+            <div class="icon-down">
+              <img src="../assets/images/icon_down.svg" alt="" />
+            </div>
+          </div>
+          <div class="list-language">
+            <div class="icon">
+              <img src="../assets/images/vietnam.png" alt="" />
+              <p>VN</p>
+            </div>
+            <div class="icon-down">
+              <img src="../assets/images/icon_down.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-dropdown">
+        <div class="language" @click="handleShowLanguage()">
+          <div class="list-language">
+            <div class="icon">
+              <img src="../assets/images/eng.png" alt="" />
+              <p>ENG</p>
+            </div>
+            <div class="icon-down">
+              <img src="../assets/images/icon_down.svg" alt="" />
+            </div>
           </div>
         </div>
         <img
@@ -42,13 +66,15 @@
       </div>
       <div :class="['menu-dropdown', isMenu ? 'active' : '']">
         <div class="menu-dropdown-header">
-          <div class="language">
-            <div class="icon">
-              <img src="../assets/images/eng.png" alt="" />
-              <p>ENG</p>
-            </div>
-            <div class="icon-down">
-              <img src="../assets/images/icon_down.svg" alt="" />
+          <div class="language" @click="handleShowLanguage()">
+            <div class="list-language">
+              <div class="icon">
+                <img src="../assets/images/eng.png" alt="" />
+                <p>ENG</p>
+              </div>
+              <div class="icon-down">
+                <img src="../assets/images/icon_down.svg" alt="" />
+              </div>
             </div>
           </div>
           <div class="icon" @click="handleShowMenu()">
@@ -73,20 +99,25 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref } from 'vue';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Header",
+  name: 'Header',
   setup() {
     const isMenu = ref(false);
+    const isShowLanguage = ref(false);
     const listMenu = ref([
-      { id: 1, value: "about us", isActive: false },
-      { id: 2, value: "products", isActive: false },
-      { id: 3, value: "partners", isActive: false },
-      { id: 4, value: "our clients", isActive: false },
-      { id: 5, value: "contact us", isActive: false },
+      { id: 1, value: 'about us', isActive: false },
+      { id: 2, value: 'products', isActive: false },
+      { id: 3, value: 'partners', isActive: false },
+      { id: 4, value: 'our clients', isActive: false },
+      { id: 5, value: 'contact us', isActive: false },
     ]);
+
+    const handleShowLanguage = () => {
+      isShowLanguage.value = !isShowLanguage.value;
+    };
 
     const handleClickMenu = (id) => {
       listMenu.value = listMenu.value.map((menu) => {
@@ -102,7 +133,14 @@ export default {
       isMenu.value = !isMenu.value;
     };
 
-    return { listMenu, isMenu, handleClickMenu, handleShowMenu };
+    return {
+      listMenu,
+      isMenu,
+      handleClickMenu,
+      handleShowMenu,
+      isShowLanguage,
+      handleShowLanguage,
+    };
   },
 };
 </script>
@@ -161,12 +199,12 @@ ul li:hover a {
 }
 ul li::after {
   transition: all 0.5s;
-  content: "";
+  content: '';
   position: absolute;
   width: 0;
 }
 ul li.active:after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 2px;
@@ -175,14 +213,20 @@ ul li.active:after {
   background: #f41616;
 }
 .language {
+  cursor: pointer;
+  position: relative;
+  width: 130px;
+}
+.list-language {
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+  max-height: 48px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #ffffff;
-  border-radius: 100px;
-  width: 130px;
-  height: 48px;
-  cursor: pointer;
+  padding: 14px;
+  height: 100%;
 }
 .language .icon {
   display: flex;
@@ -204,7 +248,19 @@ ul li.active:after {
   position: relative;
   top: -2px;
 }
-
+.list-language-full {
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  width: 130px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  transition: all 0.5s ease-in;
+}
+.list-language-full .list-language {
+  border: none;
+  border-radius: 0;
+}
 .nav-dropdown {
   display: none;
 }
@@ -254,6 +310,11 @@ ul li.active:after {
     width: 39px;
     margin-left: 5.25px;
     margin-right: 3px;
+  }
+  .list-language {
+    padding: 8px;
+    width: 97.5px;
+    height: 36px;
   }
   .nav-dropdown {
     display: flex;
