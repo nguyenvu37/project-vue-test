@@ -45,20 +45,20 @@ export default {
 }
 
 .title .name {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 28.18px;
   letter-spacing: 10px;
   text-align: left;
   color: #ff3232;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
 .title .section {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 56.35px;
   text-align: left;
@@ -70,7 +70,7 @@ export default {
 }
 
 .text p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 30px;
   letter-spacing: 1px;
@@ -78,7 +78,7 @@ export default {
   font-family: "Mulish", "sans-serif";
   padding-left: 0 !important;
   padding-right: 0 !important;
-  margin-top: 24px;
+  margin-top: 1.5rem;
 }
 
 .scroll {
@@ -89,25 +89,25 @@ export default {
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
-  width: 90px;
+  width: 5.625rem;
 }
 .scroll p {
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 400;
   line-height: 35.22px;
   letter-spacing: 1px;
   text-align: center;
   color: #fff;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 .scroll .icon {
   width: 100%;
 }
 
 .scroll img {
-  width: 51px;
-  height: 35px;
-  margin-bottom: 7px;
+  width: 3.1875rem;
+  height: 2.1875rem;
+  margin-bottom: 0.4375rem;
 }
 
 .loading {
@@ -125,35 +125,35 @@ export default {
     text-align: center;
   }
   .title .name {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 400;
     line-height: 14.09px;
     letter-spacing: 5px;
   }
   .title .section {
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: 800;
     line-height: 30.52px;
     letter-spacing: 1px;
   }
   .text p {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 32px;
   }
 }
 @media only screen and (max-width: 376px) {
   .scroll img {
-    width: 21.19px;
-    height: 15.14px;
+    width: 1.324375rem;
+    height: 0.94625rem;
     margin: 0 auto;
   }
   .scroll p {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 400;
     line-height: 14.09px;
     text-align: center;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 </style>

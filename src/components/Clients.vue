@@ -86,17 +86,17 @@ export default {
 <style>
 .clients {
   margin: 0 auto;
-  margin-top: 149px;
+  margin-top: 9.3125rem;
   padding: 0 16.25rem;
 }
 .clients-content {
-  margin-top: 80px !important;
+  margin-top: 5rem !important;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  row-gap: 69px;
-  column-gap: 39px;
+  row-gap: 4.3125rem;
+  column-gap: 2.4375rem;
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
@@ -115,25 +115,25 @@ export default {
   }
   .clients-content {
     justify-content: space-between;
-    padding: 0 16px !important;
+    padding: 0 1rem !important;
   }
 }
 
 @media only screen and (max-width: 960px) {
   .clients {
-    padding: 0 16px;
+    padding: 0 1rem;
   }
   .clients-content {
     margin-top: 38px !important;
-    padding: 0 16px;
+    padding: 0 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    row-gap: 22px;
-    column-gap: 22px;
+    row-gap: 1.375rem;
+    column-gap: 1.375rem;
   }
   .clients {
-    margin-top: 75px;
+    margin-top: 4.6875rem;
   }
   .clients-item img {
     width: 100%;

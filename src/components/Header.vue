@@ -190,8 +190,8 @@ header {
   position: fixed;
   top: 0;
   z-index: 1000;
-  padding-top: 42px;
-  padding-bottom: 15px;
+  padding-top: 2.625rem;
+  padding-bottom: 0.9375rem;
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
 }
@@ -226,14 +226,14 @@ ul li a:hover {
 ul li {
   list-style: none;
   margin-left: 3.5rem;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 18.78px;
   letter-spacing: 1px;
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
-  height: 19px;
+  height: 1.1875rem;
   position: relative;
   margin-left: 1.875rem;
 }
@@ -250,25 +250,25 @@ ul li.active:after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 0.125rem;
   left: 0;
-  bottom: -11px;
+  bottom: -0.6875rem;
   background: #f41616;
 }
 .language {
   cursor: pointer;
   position: relative;
-  width: 130px;
+  width: 8.125rem;
 }
 .list-language {
   border: 1px solid #ffffff;
   border-radius: 100px;
-  max-height: 48px;
+  max-height: 3rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px;
+  padding: 0.875rem;
   height: 100%;
 }
 .language .icon {
@@ -280,31 +280,31 @@ ul li.active:after {
   height: 1.25rem;
 }
 .language .icon p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 18.78px;
   letter-spacing: 0.25px;
   color: #fff;
   margin-bottom: 0;
-  margin-left: 7px;
-  width: 53px;
+  margin-left: 0.4375rem;
+  width: 3.3125rem;
 }
 .language .icon-down img {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   position: relative;
-  top: -2px;
+  top: -0.125rem;
 }
 .list-language-full {
   border: 1px solid #ffffff;
   border-radius: 25px;
-  width: 130px;
+  width: 8.125rem;
   height: auto;
   position: absolute;
   top: 0;
   transition: all 0.5s ease-in;
   background: rgba(0, 0, 0, 0.8);
-  padding: 4px;
+  padding: 0.25rem;
   animation: dropdownLanguage 0.5s ease-in-out;
 }
 @keyframes dropdownLanguage {
@@ -342,40 +342,40 @@ ul li.active:after {
 
 @media only screen and (max-width: 1400px) {
   .language .icon-down img {
-    width: 12px;
-    height: 11px;
+    width: 0.75rem;
+    height: 0.6875rem;
     position: relative;
-    top: -1px;
+    top: -0.0625rem;
   }
 }
 
 @media only screen and (max-width: 1200px) {
   header {
-    padding-top: 19px;
+    padding-top: 1.1875rem;
   }
   .header-content {
     justify-content: space-between;
   }
   .header-logo img {
-    width: 90px;
-    height: 31px;
+    width: 5.625rem;
+    height: 1.9375rem;
   }
   .nav-full,
   .lang-full {
     display: none !important;
   }
   .language .icon p {
-    width: 39px;
-    margin-left: 5.25px;
-    margin-right: 3px;
+    width: 2.4375rem;
+    margin-left: 0.328125rem;
+    margin-right: 0.1875rem;
   }
   .list-language {
-    padding: 8px;
-    width: 97.5px;
-    height: 36px;
+    padding: 0.5rem;
+    width: 6.09375rem;
+    height: 2.25rem;
   }
   .list-language-full {
-    width: 97.5px;
+    width: 6.09375rem;
   }
   .nav-dropdown {
     display: flex;
@@ -384,12 +384,12 @@ ul li.active:after {
     cursor: pointer;
   }
   .nav-dropdown .language {
-    margin-right: 28.5px;
-    width: 97.5px;
-    height: 36px;
+    margin-right: 1.78125rem;
+    width: 6.09375rem;
+    height: 2.25rem;
   }
   .nav-dropdown .language .icon p {
-    width: 39px;
+    width: 2.4375rem;
   }
   .menu-dropdown.active {
     width: 100%;
@@ -413,16 +413,16 @@ ul li.active:after {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 19px 16px;
+    padding: 1.1875rem 1rem;
   }
   .menu-dropdown-header .language {
-    width: 97.5px;
-    height: 36px;
+    width: 6.09375rem;
+    height: 2.25rem;
   }
   .menu-dropdown .menu {
     display: flex;
     justify-content: center;
-    margin-top: 27px;
+    margin-top: 1.6875rem;
   }
   .menu-dropdown ul {
     flex-direction: column;
@@ -430,7 +430,7 @@ ul li.active:after {
   }
   .menu-dropdown ul li {
     width: 100%;
-    padding: 32px 0;
+    padding: 2rem 0;
     border-bottom: 0.8px solid rgba(255, 255, 255, 0.1);
     text-align: center;
   }
@@ -447,9 +447,9 @@ ul li.active:after {
 
 @media only screen and (max-width: 960px) {
   header {
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 19px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1.1875rem;
   }
   .header-content {
     padding: 0;

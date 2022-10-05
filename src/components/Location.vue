@@ -49,26 +49,26 @@ export default {
   color: #fff;
   width: 100%;
   text-align: center;
-  margin-top: 86.62px;
-  padding: 0 548px;
+  margin-top: 5.41375rem;
+  padding: 0 34.25rem;
 }
 .location-content-title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 28.18px;
   letter-spacing: 10px;
   color: #ff3232;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 .location-content-suggest {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 56.35px;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 .location-content-text p {
   font-family: "Mulish", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 32px;
   margin-bottom: 0;
@@ -83,7 +83,7 @@ export default {
 }
 .location-bg img {
   width: 75%;
-  height: 628px;
+  height: 39.25rem;
   margin: 0 auto;
 }
 .location-building {
@@ -93,14 +93,14 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 628px;
+  height: 39.25rem;
   display: flex;
   align-content: center;
   justify-content: center;
 }
 .location-building-content {
-  width: 357px;
-  height: 452px;
+  width: 22.3125rem;
+  height: 28.25rem;
   background: rgba(21, 22, 30, 0.9);
   border-radius: 0px 0px 20px 20px;
   display: flex;
@@ -120,7 +120,7 @@ export default {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 96px;
+  width: 6rem;
   height: 1px;
   background: #f41616;
 }
@@ -169,8 +169,8 @@ export default {
 
 @media only screen and (max-width: 960px) {
   .location-content {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .location-bg img {
     width: 100%;
@@ -178,63 +178,64 @@ export default {
   .location-building {
     background: url(../assets/images/building.png);
     width: 100%;
-    height: 480px;
+    height: 30rem;
     background-size: contain;
   }
   .location-building-content {
-    width: 253px;
-    height: 281px;
+    width: 15.8125rem;
+    height: 17.5625rem;
     left: 50%;
     top: 35%;
     transform: translate(-50%, -50%);
+    padding: 1.75rem 0 3rem;
   }
   .location-building {
     transform: translateY(0);
-    height: 409px;
+    height: 25.5625rem;
     position: relative;
     background-color: #15161e;
   }
   .location-building img {
-    height: 300px;
+    height: 18.75rem;
     position: absolute;
     bottom: 0;
   }
   .location-building-content-title p:first-child {
-    font-size: 96px;
+    font-size: 6rem;
     line-height: 112.5px;
   }
   .location-building-content-title p:last-child {
-    font-size: 26px;
+    font-size: 1.625rem;
     line-height: 32.63px;
-    margin-top: -10px;
+    margin-top: -0.625rem;
   }
   .location-building-content-text {
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
   .location-building-content-text p {
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 22.59px;
   }
   .location-bg {
     transform: translateY(0);
-    margin-top: 25px;
+    margin-top: 1.5625rem;
   }
   .location-bg img {
     width: 100%;
-    height: 360px;
+    height: 22.5rem;
     object-fit: cover;
   }
 
   .location-content-title {
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 14.09px;
     letter-spacing: 5px;
   }
   .location-content-suggest {
-    font-size: 26px;
+    font-size: 1.625rem;
     line-height: 30.52px;
     letter-spacing: 1px;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -245,7 +246,7 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 185px;
+    height: 11.5625rem;
     background-size: contain;
   }
   .location-bg img {
@@ -255,7 +256,7 @@ export default {
 
 @media only screen and (max-width: 376px) {
   .location-content {
-    padding: 0 22px;
+    padding: 0 1.375rem;
   }
 }
 </style>

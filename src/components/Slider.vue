@@ -51,14 +51,14 @@ export default {
 <style>
 .swiper {
   width: 100vw;
-  height: 500px;
+  height: 31.25rem;
   padding-right: 2rem;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 1.125rem;
-  width: 253px;
+  width: 15.8125rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -66,8 +66,8 @@ export default {
 
 .swiper-slide img {
   display: block;
-  width: 253px;
-  height: 259.43px;
+  width: 15.8125rem;
+  height: 16.215625rem;
   object-fit: cover;
 }
 .slider-content .slider-name {
@@ -75,12 +75,12 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 215px;
-  height: 33.36px;
+  width: 13.4375rem;
+  height: 2.085rem;
   display: flex;
   align-content: center;
   justify-content: center;
-  margin: 18px auto 11px;
+  margin: 1.125rem auto 0.6875rem;
 }
 .slider-name p {
   font-size: 1rem;
@@ -90,7 +90,7 @@ export default {
   text-align: center;
   color: #fff;
   margin-bottom: 0;
-  height: 33.36px;
+  height: 2.085rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,7 +108,7 @@ export default {
   cursor: pointer;
 }
 .swiper-pagination {
-  bottom: 75px !important;
+  bottom: 4.6875rem !important;
 }
 .swiper-pagination-bullet {
   border-radius: 0;

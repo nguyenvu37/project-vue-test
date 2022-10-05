@@ -26,13 +26,13 @@
 </template>
 
 <script>
-import Location from './Location';
-import Product from './Product';
-import Partners from './Partners';
-import Clients from './Clients';
+import Location from "./Location";
+import Product from "./Product";
+import Partners from "./Partners";
+import Clients from "./Clients";
 
 export default {
-  name: 'MainLayout',
+  name: "MainLayout",
   components: { Location, Product, Partners, Clients },
   setup() {
     const handleScrollDown = () => {
@@ -49,7 +49,7 @@ export default {
 <style>
 .main {
   width: 100%;
-  height: 1155px;
+  height: 72.1875rem;
   position: relative;
 }
 
@@ -60,9 +60,9 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: -2px;
+  top: -0.125rem;
   width: 100%;
-  height: 1155px;
+  height: 72.1875rem;
   z-index: 12;
   animation: bgImage 2s ease-out;
 }
@@ -89,7 +89,7 @@ export default {
   background-size: cover;
   position: absolute;
   width: 100%;
-  height: 1178px;
+  height: 73.625rem;
   z-index: 10;
 }
 .bg-blur {
@@ -100,7 +100,7 @@ export default {
   position: absolute;
   top: -2px;
   width: 100%;
-  height: 1155px;
+  height: 72.1875rem;
   z-index: 14;
 }
 .icon-blur {
@@ -133,7 +133,7 @@ export default {
   }
 }
 .main-text p {
-  font-size: 96px;
+  font-size: 6rem;
   font-weight: 800;
   line-height: 112.7px;
   text-align: center;
@@ -148,7 +148,7 @@ export default {
 .scroll {
   position: absolute;
   left: 50%;
-  bottom: 210px;
+  bottom: 13.125rem;
   z-index: 15;
   display: flex;
   align-content: center;
@@ -163,7 +163,7 @@ export default {
     bottom: 30%;
   }
   .main-text p {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 800;
     line-height: 42.26px;
     text-align: center;
@@ -171,49 +171,49 @@ export default {
     margin-bottom: 0;
   }
   .main {
-    height: 900px;
+    height: 56.25rem;
   }
 
   .main .bg-image {
-    height: 900px;
+    height: 56.25rem;
     object-fit: cover;
   }
   .bg-red {
     height: 920px;
   }
   .bg-blur {
-    height: 900px;
+    height: 56.25rem;
   }
 
   .scroll img {
-    width: 21.19px !important;
-    height: 15.14px !important;
+    width: 1.324375rem !important;
+    height: 0.94625rem !important;
     margin: 0 auto;
   }
   .scroll p {
-    font-size: 12px !important;
+    font-size: 0.75rem !important;
     line-height: 14.09px !important;
     margin-bottom: 0px !important;
   }
 }
 @media only screen and (max-width: 376px) {
   .main {
-    height: 400px;
+    height: 25rem;
   }
   .scroll {
     bottom: 61px;
   }
   .main .bg-image {
-    height: 400px;
+    height: 25rem;
     object-fit: contain;
     background: url(../assets/images/bg_main_small.png);
   }
   .bg-red {
-    height: 408px;
+    height: 25.5rem;
     background: url(../assets/images/bg_red_small.png);
   }
   .bg-blur {
-    height: 414px;
+    height: 25.875rem;
   }
   .icon-blur {
     bottom: -15%;

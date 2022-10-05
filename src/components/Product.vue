@@ -48,68 +48,68 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-import Slider from './Slider';
+import { ref } from "vue";
+import Slider from "./Slider";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Product',
+  name: "Product",
   components: { Slider },
   setup() {
     const products = ref([
       {
         id: 1,
-        name: 'Live Casino',
-        information: 'Vivo LiveCasino, HoGaming Live Casino, BPlay LiveCasino',
-        image: 'casino1.png',
+        name: "Live Casino",
+        information: "Vivo LiveCasino, HoGaming Live Casino, BPlay LiveCasino",
+        image: "casino1.png",
       },
       {
         id: 2,
-        name: 'Fishing Game',
-        information: 'BPlay Fishing 2D, BPlay Fishing 3D',
-        image: 'casino2.svg',
+        name: "Fishing Game",
+        information: "BPlay Fishing 2D, BPlay Fishing 3D",
+        image: "casino2.svg",
       },
       {
         id: 3,
-        name: 'Sport Book',
-        information: 'BTI Sportsbook, BPlay Sportsbook',
-        image: 'casino3.svg',
+        name: "Sport Book",
+        information: "BTI Sportsbook, BPlay Sportsbook",
+        image: "casino3.svg",
       },
       {
         id: 4,
-        name: 'Quick Number',
-        information: 'Keno, Number Games, Lottery',
-        image: 'casino4.svg',
+        name: "Quick Number",
+        information: "Keno, Number Games, Lottery",
+        image: "casino4.svg",
       },
       {
         id: 5,
-        name: 'White Label',
-        information: 'White Label',
-        image: 'casino5.svg',
+        name: "White Label",
+        information: "White Label",
+        image: "casino5.svg",
       },
       {
         id: 6,
-        name: 'Slots',
-        information: 'BPlay Slots, Jackpot Slots',
-        image: 'casino6.svg',
+        name: "Slots",
+        information: "BPlay Slots, Jackpot Slots",
+        image: "casino6.svg",
       },
       {
         id: 7,
-        name: 'Seamless API',
-        information: 'Seamless API',
-        image: 'casino7.svg',
+        name: "Seamless API",
+        information: "Seamless API",
+        image: "casino7.svg",
       },
       {
         id: 8,
-        name: 'Full Package',
-        information: 'Full Package',
-        image: 'casino8.svg',
+        name: "Full Package",
+        information: "Full Package",
+        image: "casino8.svg",
       },
       {
         id: 9,
-        name: 'Table Game',
-        information: 'Table Game',
-        image: 'casino9.svg',
+        name: "Table Game",
+        information: "Table Game",
+        image: "casino9.svg",
       },
     ]);
 
@@ -130,7 +130,7 @@ export default {
   background-repeat: no-repeat, no-repeat;
   background-size: 100% auto, cover;
   height: auto;
-  padding: 237px 0;
+  padding: 14.8125rem 0;
 }
 .product-content {
   padding: 0 16.25rem !important;
@@ -139,10 +139,10 @@ export default {
   color: #fff;
 }
 .product-content-list {
-  margin-top: 80px;
+  margin-top: 5rem;
 }
 .product-content-item {
-  margin-bottom: 46px;
+  margin-bottom: 2.875rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -157,7 +157,7 @@ export default {
   cursor: pointer;
 }
 .product-content-item-name {
-  background: url('../assets/images/bg_name_casino.svg');
+  background: url("../assets/images/bg_name_casino.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -165,26 +165,26 @@ export default {
   display: flex;
   align-content: center;
   justify-content: center;
-  margin: 28px auto 20px;
+  margin: 1.75rem auto 1.25rem;
   cursor: pointer;
 }
 .product-content-item .product-content-item-name p {
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 700;
   line-height: 35.22px;
   letter-spacing: 1px;
   color: #fff;
-  height: 54px;
+  height: 3.375rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .product-content-item p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
-  line-height: 28px;
+  line-height: 1.75rem;
   letter-spacing: 1px;
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   color: #fff;
   margin-bottom: 0;
   text-align: center;
@@ -199,24 +199,24 @@ export default {
 }
 @media only screen and (max-width: 1400px) {
   .product-content-item .product-content-item-name p {
-    font-size: 16px;
+    font-size: 1rem;
     height: 100%;
   }
 }
 @media only screen and (max-width: 960px) {
   .product {
-    padding: 85px 0 20px;
+    padding: 5.3125rem 0 1.25rem;
   }
   .product-content {
-    padding: 0 16px !important;
+    padding: 0 1rem !important;
   }
 }
 @media only screen and (max-width: 576px) {
   .product-content-item-name p {
-    font-size: 16px !important;
+    font-size: 1rem !important;
     line-height: 18.78px !important;
     margin-bottom: 0;
-    height: 33.36px !important;
+    height: 2.085rem !important;
   }
   .product-content-list .row {
     justify-content: center;
@@ -229,7 +229,7 @@ export default {
   .product-content-slide {
     display: block;
     height: auto;
-    margin-top: 51px;
+    margin-top: 3.1875rem;
   }
 }
 </style>

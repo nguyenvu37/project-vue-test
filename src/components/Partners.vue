@@ -39,32 +39,32 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Partners',
+  name: "Partners",
   setup() {
     const partners = ref([
       {
         id: 1,
-        image: 'sbtech.png',
+        image: "sbtech.png",
       },
       {
         id: 2,
-        image: 'iovation.png',
+        image: "iovation.png",
       },
       {
         id: 3,
-        image: 'seon.png',
+        image: "seon.png",
       },
       {
         id: 4,
-        image: 'hogaming.png',
+        image: "hogaming.png",
       },
       {
         id: 5,
-        image: 'vivo.png',
+        image: "vivo.png",
       },
     ]);
 
@@ -77,14 +77,14 @@ export default {
 
 <style>
 .partners {
-  margin-top: 39px;
+  margin-top: 2.4375rem;
 }
 .partners-right .text {
-  max-width: 622px;
+  max-width: 38.875rem;
 }
 .partners-list {
-  margin-top: 80px;
-  max-width: 738px;
+  margin-top: 5rem;
+  max-width: 46.125rem;
   transform: translateX(-40px);
 }
 .partners-left .small {
@@ -96,7 +96,7 @@ export default {
   }
   .partners-left {
     order: 2;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     width: 100%;
     transform: translateX(-20px);
   }
@@ -115,13 +115,13 @@ export default {
     transform: translateX(0);
   }
   .partners-list {
-    margin-top: 30px;
+    margin-top: 1.875rem;
     transform: translateX(0);
     justify-content: center !important;
   }
   .partners-item img {
-    width: 110px;
-    height: 45px;
+    width: 6.875rem;
+    height: 2.8125rem;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -134,7 +134,7 @@ export default {
 }
 @media only screen and (max-width: 376px) {
   .partners {
-    margin-top: 80px;
+    margin-top: 5rem;
   }
 }
 </style>

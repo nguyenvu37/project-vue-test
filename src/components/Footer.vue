@@ -76,7 +76,7 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 830px;
+  height: 51.875rem;
   position: relative;
 }
 .footer-component {
@@ -90,33 +90,33 @@ footer {
   flex: 1;
 }
 .footer-logo img {
-  width: 241px;
-  height: 82px;
+  width: 15.0625rem;
+  height: 5.125rem;
   cursor: pointer;
 }
 .footer-logo:hover img {
   opacity: 0.8;
 }
 .footer-contact-title {
-  font-size: 34px;
+  font-size: 2.125rem;
   font-weight: 800;
   line-height: 39.92px;
   text-align: left;
-  margin-bottom: 29px;
+  margin-bottom: 1.8125rem;
   color: #fff;
 }
 .footer-up {
-  padding-bottom: 44px;
+  padding-bottom: 2.75rem;
   border-bottom: 0.5px solid #424657;
 }
 .icon-text .icon {
-  width: 60px;
+  width: 3.75rem;
   float: left;
   position: relative;
-  top: 10px;
+  top: 0.625rem;
 }
 .icon-text p {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 400;
   line-height: 40.96px;
   color: #fff;
@@ -131,10 +131,11 @@ footer {
   margin-right: 53.02px;
 }
 .footer-down-right p {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 28px;
   color: #fff;
+  opacity: 0.7;
 }
 footer .scroll {
   right: 5%;
@@ -161,7 +162,7 @@ footer .scroll {
     flex-direction: column;
   }
   .footer-logo {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   }
   .footer-down-left {
     flex-direction: column;
@@ -170,47 +171,47 @@ footer .scroll {
   }
   .footer-down-list-img {
     order: 1;
-    margin-bottom: 29px;
+    margin-bottom: 1.8125rem;
   }
   .footer-down-left img {
     order: 2;
   }
   .footer-down-right p {
     color: #cecece;
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
 }
 @media only screen and (max-width: 960px) {
   .footer-component {
-    padding: 0 16px;
+    padding: 0 1rem;
     transform: translateY(250px);
   }
   .footer-logo img {
-    width: 118px;
-    height: 40px;
+    width: 7.375rem;
+    height: 2.5rem;
   }
   .footer-contact-title {
     font-weight: 800;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 21.13px;
   }
   .icon-text p {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .icon-text .icon {
-    width: 40px;
+    width: 2.5rem;
   }
   footer .scroll {
-    width: 33px;
-    height: 44px;
+    width: 2.0625rem;
+    height: 2.75rem;
   }
   footer .scroll img {
-    width: 33px !important;
-    height: 22px !important;
-    margin-bottom: 6px;
+    width: 2.0625rem !important;
+    height: 1.375rem !important;
+    margin-bottom: 0.375rem;
   }
   footer .scroll p {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 400;
     line-height: 16.44px;
     letter-spacing: 1px;
@@ -218,12 +219,12 @@ footer .scroll {
 }
 @media only screen and (max-width: 600px) {
   .footer-down-left img {
-    width: 246px;
-    height: 48px;
+    width: 15.5rem;
+    height: 3rem;
   }
   .footer-down-list-img img {
     width: auto;
-    margin-right: 40px;
+    margin-right: 2.5rem;
   }
   footer .scroll {
     bottom: 8%;
@@ -232,7 +233,7 @@ footer .scroll {
 }
 @media only screen and (max-width: 376px) {
   footer {
-    margin-top: -50px;
+    margin-top: -3.125rem;
   }
   .footer-down-left {
     width: 100%;
@@ -240,20 +241,20 @@ footer .scroll {
     align-items: center;
   }
   .footer-down-left img {
-    width: 246px;
+    width: 15.375rem;
   }
   .footer-down-list-img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 246px;
+    width: 15.375rem;
     margin-left: 0;
   }
   .footer-down-list-img img {
     object-fit: contain;
   }
   .footer-down-right p {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 </style>
