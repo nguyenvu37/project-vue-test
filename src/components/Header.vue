@@ -1,12 +1,12 @@
 <template>
-  <header>
+  <header v-click-outside="onClickOutside">
     <div class="header-content">
-      <div class="header-logo">
+      <div class="header-logo" @click="onClickOutside">
         <a href="#">
           <img src="../assets/images/logo.svg" alt="logo" />
         </a>
       </div>
-      <ul class="nav-bar nav-full">
+      <ul class="nav-bar nav-full" @click="onClickOutside">
         <li
           :class="menu.isActive ? 'active' : ''"
           v-for="menu in listMenu"
@@ -16,11 +16,7 @@
           <a :href="`#item${menu.id}`">{{ menu.value }}</a>
         </li>
       </ul>
-      <div
-        class="language lang-full"
-        @click="handleShowLanguage()"
-        v-click-outside="onClickOutside"
-      >
+      <div class="language lang-full" @click="handleShowLanguage()">
         <div v-if="!isShowLanguage" class="list-language">
           <div class="icon">
             <img :src="require(`../assets/images/${language}.png`)" alt="" />
@@ -147,6 +143,10 @@ export default {
       { id: 5, value: "contact us", isActive: false },
     ]);
 
+    const onClickOutside = () => {
+      isShowLanguage.value = false;
+    };
+
     const handleShowLanguage = () => {
       isShowLanguage.value = !isShowLanguage.value;
     };
@@ -165,12 +165,9 @@ export default {
         .map((menu) => (menu.isActive = false));
     };
 
-    const onClickOutside = () => {
-      isShowLanguage.value = !isShowLanguage.value;
-    };
-
     const handleShowMenu = () => {
       isMenu.value = !isMenu.value;
+      isShowLanguage.value = false;
     };
 
     return {
