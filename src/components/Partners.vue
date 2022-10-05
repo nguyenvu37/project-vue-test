@@ -75,6 +75,9 @@ export default {
 </script>
 
 <style>
+.partners {
+  margin-top: 39px;
+}
 .partners-right .text {
   max-width: 622px;
 }

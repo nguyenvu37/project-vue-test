@@ -49,6 +49,7 @@ export default {
   color: #fff;
   padding-left: 0 !important;
   padding-right: 0 !important;
+  margin-bottom: 0;
 }
 
 .text p {
@@ -60,6 +61,7 @@ export default {
   font-family: "Mulish", "sans-serif";
   padding-left: 0 !important;
   padding-right: 0 !important;
+  margin-top: 24px;
 }
 
 .scroll {

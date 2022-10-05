@@ -1,7 +1,7 @@
 <template>
   <section id="item2">
     <div class="product">
-      <div class="product-bg"></div>
+      <!-- <div class="product-bg"></div> -->
       <div class="product-content">
         <div class="product-content-text">
           <div class="row">
@@ -124,25 +124,16 @@ export default {
 .product {
   width: 100%;
   position: relative;
-  background: url(../assets/images/bg_wave.svg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url(../assets/images/bg_gambling.png),
+    url(../assets/images/bg_wave.svg);
+  background-position: top, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% auto, cover;
   height: auto;
-}
-.product-bg {
-  background: url(../assets/images/bg_gambling.svg);
-  width: 100%;
-  height: 600px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #1a1c25;
-  transform: translateY(100px);
+  padding: 237px 0;
 }
 .product-content {
   padding: 0 16.25rem !important;
-  transform: translateY(-300px);
 }
 .product-content-text {
   color: #fff;
@@ -213,6 +204,9 @@ export default {
   }
 }
 @media only screen and (max-width: 960px) {
+  .product {
+    padding: 85px 0;
+  }
   .product-content {
     padding: 0 16px !important;
   }
@@ -229,27 +223,13 @@ export default {
   }
 }
 @media only screen and (max-width: 376px) {
-  .product {
-    height: 1300px;
-  }
-  .product-bg {
-    background: url(../assets/images/bg_gambling_small.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 253px;
-    transform: translateY(-10px);
-    background-color: #1a1c25;
-  }
-  .product-content-text {
-    margin-top: 155px;
-  }
   .product-content-list {
     display: none;
   }
   .product-content-slide {
     display: block;
     height: auto;
+    margin-top: 51px;
   }
 }
 </style>

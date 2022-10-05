@@ -185,7 +185,7 @@ export default {
     width: 253px;
     height: 281px;
     left: 50%;
-    top: 50%;
+    top: 35%;
     transform: translate(-50%, -50%);
   }
   .location-building {
@@ -217,10 +217,11 @@ export default {
   }
   .location-bg {
     transform: translateY(0);
+    margin-top: 25px;
   }
   .location-bg img {
     width: 100%;
-    height: 185px;
+    height: 360px;
     object-fit: cover;
   }
 
@@ -234,6 +235,21 @@ export default {
     line-height: 30.52px;
     letter-spacing: 1px;
     margin-bottom: 24px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .location-bg {
+    transform: translateY(0);
+    background: url(../assets/images/maps.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 185px;
+    background-size: contain;
+  }
+  .location-bg img {
+    display: none;
   }
 }
 

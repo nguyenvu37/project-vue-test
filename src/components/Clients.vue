@@ -86,11 +86,11 @@ export default {
 <style>
 .clients {
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 149px;
   padding: 0 16.25rem;
 }
 .clients-content {
-  margin-top: 80px;
+  margin-top: 80px !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,13 +120,7 @@ export default {
     padding: 0 16px;
   }
   .clients-content {
-    column-gap: 5px;
-    row-gap: 30px;
-  }
-  .clients {
-    margin-top: 90px !important;
-  }
-  .clients-content {
+    margin-top: 38px !important;
     padding: 0 16px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -134,11 +128,12 @@ export default {
     row-gap: 22px;
     column-gap: 22px;
   }
+  .clients {
+    margin-top: 90px !important;
+  }
   .clients-item img {
     width: 100%;
     border-radius: 4px;
   }
-}
-@media only screen and (max-width: 376px) {
 }
 </style>
