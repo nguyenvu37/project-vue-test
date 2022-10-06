@@ -31,7 +31,7 @@
               :key="product.id"
             >
               <img
-                :src="require(`../../assets/images/${product.image}`)"
+                :src="require(`../../assets/images/products/${product.image}`)"
                 alt=""
               />
               <div class="product-content-item-name">
@@ -64,7 +64,7 @@ export default {
         id: 1,
         name: 'Live Casino',
         information: 'Vivo LiveCasino, HoGaming Live Casino, BPlay LiveCasino',
-        image: 'casino1.png',
+        image: 'casino1.svg',
       },
       {
         id: 2,
@@ -127,8 +127,8 @@ export default {
 .product {
   width: 100%;
   position: relative;
-  background: url(../../assets/images/bg_gambling.png),
-    url(../../assets/images/bg_wave.svg);
+  background: url(../../assets/images/products/bg_gambling.png),
+    url(../../assets/images/products/bg_wave.svg);
   background-position: top, center;
   background-repeat: no-repeat, no-repeat;
   background-size: 100% auto, cover;
@@ -160,7 +160,7 @@ export default {
   cursor: pointer;
 }
 .product-content-item-name {
-  background: url('../../assets/images/bg_name_casino.svg');
+  background: url(../../assets/images/products/bg_name_casino.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

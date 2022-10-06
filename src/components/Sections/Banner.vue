@@ -14,7 +14,7 @@
       <div class="scroll" @click="handleScrollDown">
         <p>Scroll</p>
         <div class="icon d-flex align-items-center justify-content-center">
-          <img src="../../assets/images/icon_scroll_d.svg" alt="" />
+          <img src="../../assets/images/header/icon_scroll_d.svg" alt="" />
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@ export default {
 .banner .bg-image {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
-  background: url(../../assets/images/bg_main.png);
+  background: url(../../assets/images/banner/bg_main.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,13 +60,13 @@ export default {
 
 @keyframes bgImage {
   0% {
-    background: url(../../assets/images/bg_black.png);
+    background: url(../../assets/images/banner/bg_black.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   100% {
-    background: url(../../assets/images/bg_main.png);
+    background: url(../../assets/images/banner/bg_main.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -74,7 +74,7 @@ export default {
 }
 
 .bg-red {
-  background: url(../../assets/images/bg_red.png);
+  background: url(../../assets/images/banner/bg_red.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -84,7 +84,7 @@ export default {
   z-index: 10;
 }
 .bg-blur {
-  background: url(../../assets/images/bg_black.png);
+  background: url(../../assets/images/banner/bg_black.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -95,7 +95,7 @@ export default {
   z-index: 14;
 }
 .icon-blur {
-  background: url(../../assets/images/chip.svg);
+  background: url(../../assets/images/banner/chip.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -197,11 +197,11 @@ export default {
   .banner .bg-image {
     height: 25rem;
     object-fit: contain;
-    background: url(../../assets/images/bg_main_small.png);
+    background: url(../../assets/images/banner/bg_main_small.png);
   }
   .bg-red {
     height: 25.5rem;
-    background: url(../../assets/images/bg_red_small.png);
+    background: url(../../assets/images/banner/bg_red_small.png);
   }
   .bg-blur {
     height: 25.875rem;

@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="location-bg">
-        <img src="../../assets/images/maps.png" alt="" />
+        <img src="../../assets/images/location/maps.png" alt="" />
       </div>
       <div class="location-building">
         <div class="location-building-content">
@@ -88,7 +88,7 @@ export default {
 }
 .location-building {
   position: relative;
-  background: url(../../assets/images/buildings.png);
+  background: url(../../assets/images/location/buildings.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -176,7 +176,7 @@ export default {
     width: 100%;
   }
   .location-building {
-    background: url(../../assets/images/building.png);
+    background: url(../../assets/images/location/building.png);
     width: 100%;
     height: 30rem;
     background-size: contain;
@@ -242,7 +242,7 @@ export default {
 @media only screen and (max-width: 576px) {
   .location-bg {
     transform: translateY(0);
-    background: url(../../assets/images/maps.svg);
+    background: url(../../assets/images/location/maps.svg);
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;

@@ -3,8 +3,16 @@
     <div class="container-fluid">
       <div class="partners d-flex align-items-center">
         <div class="partners-left flex-xl-grow-1">
-          <img src="../../assets/images/partners.png" alt="" class="full" />
-          <img src="../../assets/images/partners1.png" alt="" class="small" />
+          <img
+            src="../../assets/images/partners/partners.png"
+            alt=""
+            class="full"
+          />
+          <img
+            src="../../assets/images/partners/partners1.png"
+            alt=""
+            class="small"
+          />
         </div>
         <div class="partners-right flex-xl-grow-1">
           <div class="partners-content">
@@ -30,7 +38,7 @@
               :key="partner.id"
             >
               <img
-                :src="require(`../../assets/images/${partner.image}`)"
+                :src="require(`../../assets/images/partners/${partner.image}`)"
                 alt=""
               />
             </div>

@@ -4,7 +4,7 @@
       <div class="footer-up d-flex align-item-center justify-content-between">
         <div class="footer-logo">
           <a href="#">
-            <img src="../../assets/images/logo_footer.svg" alt="" />
+            <img src="../../assets/images/footer/logo_footer.svg" alt="" />
           </a>
         </div>
         <div class="footer-contact d-flex justify-content-start flex-column">
@@ -15,7 +15,7 @@
             >
               <div class="icon">
                 <img
-                  src="../../assets/images/location.svg"
+                  src="../../assets/images/footer/location.svg"
                   alt=""
                   class="locations"
                 />
@@ -26,7 +26,11 @@
               class="footer-contact-email icon-text d-flex align-items-start"
             >
               <div class="icon">
-                <img src="../../assets/images/mail.svg" alt="" class="mail" />
+                <img
+                  src="../../assets/images/footer/mail.svg"
+                  alt=""
+                  class="mail"
+                />
               </div>
               <p>info@bplay.com</p>
             </div>
@@ -37,11 +41,11 @@
         class="footer-down d-flex align-items-center justify-content-between"
       >
         <div class="footer-down-left d-flex align-item-center">
-          <img src="../../assets/images/mga.svg" alt="" />
+          <img src="../../assets/images/footer/mga.svg" alt="" />
           <div class="footer-down-list-img">
-            <img src="../../assets/images/sabs.svg" alt="" />
-            <img src="../../assets/images/curacao.svg" alt="" />
-            <img src="../../assets/images/itech.svg" alt="" />
+            <img src="../../assets/images/footer/sabs.svg" alt="" />
+            <img src="../../assets/images/footer/curacao.svg" alt="" />
+            <img src="../../assets/images/footer/itech.svg" alt="" />
           </div>
         </div>
         <div class="footer-down-right">
@@ -53,7 +57,7 @@
     </div>
     <div class="scroll" @click="handleScrollTop">
       <div class="icon d-flex align-items-center justify-content-center">
-        <img src="../../assets/images/icon_scroll_u.svg" alt="" />
+        <img src="../../assets/images/footer/icon_scroll_u.svg" alt="" />
       </div>
       <p>Top</p>
     </div>
@@ -76,7 +80,7 @@ export default {
 
 <style>
 footer {
-  background: url(../../assets/images/bg_footer.png);
+  background: url(../../assets/images/footer/bg_footer.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

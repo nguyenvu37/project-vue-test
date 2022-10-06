@@ -10,7 +10,10 @@
         </div>
         <div class="clients-content">
           <div class="clients-item" v-for="client in clients" :key="client.id">
-            <img :src="require(`../../assets/images/${client.image}`)" alt="" />
+            <img
+              :src="require(`../../assets/images/clients/${client.image}`)"
+              alt=""
+            />
           </div>
         </div>
       </div>
