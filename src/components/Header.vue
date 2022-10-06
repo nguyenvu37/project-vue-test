@@ -26,7 +26,7 @@
             <img src="../assets/images/icon_down.svg" alt="" />
           </div>
         </div>
-        <div v-if="isShowLanguage" class="list-language-full">
+        <div v-else class="list-language-full">
           <div class="list-language" @click="handleChangeLanguage('ENG')">
             <div class="icon">
               <img src="../assets/images/ENG.png" alt="" />
@@ -53,7 +53,7 @@
               <img src="../assets/images/icon_down.svg" alt="" />
             </div>
           </div>
-          <div v-if="isShowLanguage" class="list-language-full">
+          <div v-else class="list-language-full">
             <div class="list-language" @click="handleChangeLanguage('ENG')">
               <div class="icon">
                 <img src="../assets/images/ENG.png" alt="" />
@@ -89,7 +89,7 @@
                 <img src="../assets/images/icon_down.svg" alt="" />
               </div>
             </div>
-            <div v-if="isShowLanguage" class="list-language-full">
+            <div v-else class="list-language-full">
               <div class="list-language" @click="handleChangeLanguage('ENG')">
                 <div class="icon">
                   <img src="../assets/images/ENG.png" alt="" />
@@ -126,21 +126,21 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref } from 'vue';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Header",
+  name: 'Header',
   setup() {
     const isMenu = ref(false);
     const isShowLanguage = ref(false);
-    const language = ref("ENG");
+    const language = ref('ENG');
     const listMenu = ref([
-      { id: 1, value: "about us", isActive: false },
-      { id: 2, value: "products", isActive: false },
-      { id: 3, value: "partners", isActive: false },
-      { id: 4, value: "our clients", isActive: false },
-      { id: 5, value: "contact us", isActive: false },
+      { id: 1, value: 'about us', isActive: false },
+      { id: 2, value: 'products', isActive: false },
+      { id: 3, value: 'partners', isActive: false },
+      { id: 4, value: 'our clients', isActive: false },
+      { id: 5, value: 'contact us', isActive: false },
     ]);
 
     const onClickOutside = () => {
@@ -242,12 +242,12 @@ ul li:hover a {
 }
 ul li::after {
   transition: all 0.5s;
-  content: "";
+  content: '';
   position: absolute;
   width: 0;
 }
 ul li.active:after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 0.125rem;
