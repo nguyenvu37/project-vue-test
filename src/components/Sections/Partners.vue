@@ -3,8 +3,8 @@
     <div class="container-fluid">
       <div class="partners d-flex align-items-center">
         <div class="partners-left flex-xl-grow-1">
-          <img src="../assets/images/partners.png" alt="" class="full" />
-          <img src="../assets/images/partners1.png" alt="" class="small" />
+          <img src="../../assets/images/partners.png" alt="" class="full" />
+          <img src="../../assets/images/partners1.png" alt="" class="small" />
         </div>
         <div class="partners-right flex-xl-grow-1">
           <div class="partners-content">
@@ -29,7 +29,10 @@
               v-for="partner in partners"
               :key="partner.id"
             >
-              <img :src="require(`../assets/images/${partner.image}`)" alt="" />
+              <img
+                :src="require(`../../assets/images/${partner.image}`)"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -39,32 +42,32 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref } from 'vue';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Partners",
+  name: 'Partners',
   setup() {
     const partners = ref([
       {
         id: 1,
-        image: "sbtech.png",
+        image: 'sbtech.png',
       },
       {
         id: 2,
-        image: "iovation.png",
+        image: 'iovation.png',
       },
       {
         id: 3,
-        image: "seon.png",
+        image: 'seon.png',
       },
       {
         id: 4,
-        image: "hogaming.png",
+        image: 'hogaming.png',
       },
       {
         id: 5,
-        image: "vivo.png",
+        image: 'vivo.png',
       },
     ]);
 

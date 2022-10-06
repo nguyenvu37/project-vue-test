@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import Banner from './Banner';
-import Location from './Location';
-import Product from './Product';
-import Partners from './Partners';
-import Clients from './Clients';
+import Banner from '../Sections/Banner';
+import Location from '../Sections/Location';
+import Product from '../Sections/Product';
+import Partners from '../Sections/Partners';
+import Clients from '../Sections/Clients';
 
 export default {
   name: 'MainLayout',

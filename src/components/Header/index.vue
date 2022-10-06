@@ -3,7 +3,7 @@
     <div class="header-content">
       <div class="header-logo" @click="onClickOutside">
         <a href="#">
-          <img src="../assets/images/logo.svg" alt="logo" />
+          <img src="../../assets/images/logo.svg" alt="logo" />
         </a>
       </div>
       <ul class="nav-bar nav-full" @click="onClickOutside">
@@ -19,23 +19,23 @@
       <div class="language lang-full" @click="handleShowLanguage()">
         <div v-if="!isShowLanguage" class="list-language">
           <div class="icon">
-            <img :src="require(`../assets/images/${language}.png`)" alt="" />
+            <img :src="require(`../../assets/images/${language}.png`)" alt="" />
             <p>{{ language }}</p>
           </div>
           <div class="icon-down">
-            <img src="../assets/images/icon_down.svg" alt="" />
+            <img src="../../assets/images/icon_down.svg" alt="" />
           </div>
         </div>
         <div v-else class="list-language-full">
           <div class="list-language" @click="handleChangeLanguage('ENG')">
             <div class="icon">
-              <img src="../assets/images/ENG.png" alt="" />
+              <img src="../../assets/images/ENG.png" alt="" />
               <p>ENG</p>
             </div>
           </div>
           <div class="list-language" @click="handleChangeLanguage('VN')">
             <div class="icon">
-              <img src="../assets/images/VN.png" alt="" />
+              <img src="../../assets/images/VN.png" alt="" />
               <p>VN</p>
             </div>
           </div>
@@ -46,30 +46,33 @@
         <div class="language" @click="handleShowLanguage()">
           <div v-if="!isShowLanguage" class="list-language">
             <div class="icon">
-              <img :src="require(`../assets/images/${language}.png`)" alt="" />
+              <img
+                :src="require(`../../assets/images/${language}.png`)"
+                alt=""
+              />
               <p>{{ language }}</p>
             </div>
             <div class="icon-down">
-              <img src="../assets/images/icon_down.svg" alt="" />
+              <img src="../../assets/images/icon_down.svg" alt="" />
             </div>
           </div>
           <div v-else class="list-language-full">
             <div class="list-language" @click="handleChangeLanguage('ENG')">
               <div class="icon">
-                <img src="../assets/images/ENG.png" alt="" />
+                <img src="../../assets/images/ENG.png" alt="" />
                 <p>ENG</p>
               </div>
             </div>
             <div class="list-language" @click="handleChangeLanguage('VN')">
               <div class="icon">
-                <img src="../assets/images/VN.png" alt="" />
+                <img src="../../assets/images/VN.png" alt="" />
                 <p>VN</p>
               </div>
             </div>
           </div>
         </div>
         <img
-          src="../assets/images/icon_dropdown.png"
+          src="../../assets/images/icon_dropdown.png"
           alt=""
           @click="handleShowMenu()"
         />
@@ -80,32 +83,32 @@
             <div v-if="!isShowLanguage" class="list-language">
               <div class="icon">
                 <img
-                  :src="require(`../assets/images/${language}.png`)"
+                  :src="require(`../../assets/images/${language}.png`)"
                   alt=""
                 />
                 <p>{{ language }}</p>
               </div>
               <div class="icon-down">
-                <img src="../assets/images/icon_down.svg" alt="" />
+                <img src="../../assets/images/icon_down.svg" alt="" />
               </div>
             </div>
             <div v-else class="list-language-full">
               <div class="list-language" @click="handleChangeLanguage('ENG')">
                 <div class="icon">
-                  <img src="../assets/images/ENG.png" alt="" />
+                  <img src="../../assets/images/ENG.png" alt="" />
                   <p>ENG</p>
                 </div>
               </div>
               <div class="list-language" @click="handleChangeLanguage('VN')">
                 <div class="icon">
-                  <img src="../assets/images/VN.png" alt="" />
+                  <img src="../../assets/images/VN.png" alt="" />
                   <p>VN</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="icon" @click="handleShowMenu()">
-            <img src="../assets/images/close.png" alt="" />
+            <img src="../../assets/images/close.png" alt="" />
           </div>
         </div>
         <div class="menu">

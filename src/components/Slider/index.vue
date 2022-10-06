@@ -11,7 +11,7 @@
     <swiper-slide v-for="product in products" :key="product.id">
       <div class="slider-content">
         <div class="slider-image">
-          <img :src="require(`../assets/images/${product.image}`)" alt="" />
+          <img :src="require(`../../assets/images/${product.image}`)" alt="" />
         </div>
         <div class="slider-name">
           <p>{{ product.name }}</p>
@@ -72,7 +72,7 @@ export default {
   object-fit: cover;
 }
 .slider-content .slider-name {
-  background: url('../assets/images/bg_name_casino.svg');
+  background: url('../../assets/images/bg_name_casino.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
