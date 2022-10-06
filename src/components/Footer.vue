@@ -14,7 +14,11 @@
               class="footer-contact-location icon-text d-flex align-items-start"
             >
               <div class="icon">
-                <img src="../assets/images/location.svg" alt="" />
+                <img
+                  src="../assets/images/location.svg"
+                  alt=""
+                  class="locations"
+                />
               </div>
               <p>2901 Marmora Road, Glassgow, Seattle, WA 98122-1090</p>
             </div>
@@ -22,7 +26,7 @@
               class="footer-contact-email icon-text d-flex align-items-start"
             >
               <div class="icon">
-                <img src="../assets/images/mail.svg" alt="" />
+                <img src="../assets/images/mail.svg" alt="" class="mail" />
               </div>
               <p>info@bplay.com</p>
             </div>
@@ -59,7 +63,7 @@
 <script>
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Footer",
+  name: 'Footer',
   setup() {
     const handleScrollTop = () => window.scrollTo(0, 0);
 
@@ -197,10 +201,20 @@ footer .scroll {
   }
   .icon-text p {
     font-size: 1rem;
+    line-height: 23.4px;
   }
   .icon-text .icon {
     width: 2.5rem;
+    position: relative;
+    top: 2px;
   }
+  .icon-text .icon img.locations {
+    width: 0.92375rem;
+  }
+  .icon-text .icon img.mail {
+    width: 1.098125rem;
+  }
+
   footer .scroll {
     width: 2.0625rem;
     height: 2.75rem;
@@ -227,7 +241,7 @@ footer .scroll {
     margin-right: 2.5rem;
   }
   footer .scroll {
-    bottom: 8%;
+    bottom: 14%;
     right: 0;
   }
 }
